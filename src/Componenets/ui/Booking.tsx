@@ -70,7 +70,7 @@ const BookingManagement = () => {
                 Expected Commission
               </span>
               <span className="text-xl font-extrabold text-[#00176b]">
-                $1,200
+                &#2547; 1,200
               </span>
             </div>
 
@@ -116,7 +116,7 @@ const BookingManagement = () => {
             <div className="rounded-xl bg-slate-50 p-4 grid grid-cols-[1fr_auto] items-center gap-3">
               <span className="text-sm text-slate-500">Total Commission</span>
               <span className="text-xl font-extrabold text-secondary">
-                $3,450
+                &#2547; 3,450
               </span>
             </div>
 
@@ -172,7 +172,7 @@ const BookingManagement = () => {
                 Expected Commission
               </span>
               <span className="text-xl font-extrabold text-[#00176b]">
-                $850
+                &#2547; 850
               </span>
             </div>
 
@@ -212,7 +212,7 @@ const BookingManagement = () => {
                 </span>
               </div>
               <div>
-                <p className="text-xl font-extrabold text-[#00176b]">$12,400</p>
+                <p className="text-xl font-extrabold text-[#00176b]">&#2547; 12,400</p>
                 <p className="text-sm text-slate-500">Pending Settlements</p>
               </div>
             </div>

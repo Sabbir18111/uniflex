@@ -13,7 +13,7 @@ const Dashboard = () => {
               </span>
             </div>
             <h2 className="mt-2 text-[28px] leading-none font-extrabold tracking-tight">
-              $42,850
+              &#2547; 42,850
             </h2>
             <p className="mt-1 text-[11px] text-green-600">
               +12.5% vs last month
@@ -30,7 +30,7 @@ const Dashboard = () => {
               </span>
             </div>
             <h2 className="mt-2 text-[28px] leading-none font-extrabold tracking-tight">
-              $3,120
+              &#2547; 3,120
             </h2>
             <p className="mt-1 text-[11px] text-slate-500">
               4 invoices awaiting approval
@@ -172,7 +172,7 @@ const Dashboard = () => {
             <div className="h-full w-3/4 rounded-full bg-[#07277f]" />
           </div>
           <p className="mt-2 text-center text-[10px] text-slate-500">
-            $15,000 more to unlock 5% bonus
+            &#2547; 15,000 more to unlock 5% bonus
           </p>
         </section>
 

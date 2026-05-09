@@ -15,7 +15,7 @@ const Payments = () => {
                 Available Balance
               </p>
               <h2 className="mt-2 text-numeral-xl leading-none font-extrabold tracking-tight text-[#00176b]">
-                $12,450.80
+                &#2547;12,450.80
               </h2>
               <div className="mt-3 grid grid-cols-1 gap-2">
                 <span className="w-fit rounded-full bg-green-100 px-3 py-1 text-xs font-bold text-green-700">
@@ -81,7 +81,7 @@ const Payments = () => {
               </div>
               <div className="grid grid-cols-[1fr_auto] items-center gap-2">
                 <p className="text-lg font-extrabold text-[#00176b]">
-                  +$3,240.00
+                  +&#2547; 3,240.00
                 </p>
                 <span className="rounded-full bg-green-100 px-2 py-1 text-[10px] font-bold text-green-700">
                   Completed
@@ -118,7 +118,7 @@ const Payments = () => {
               </div>
               <div className="grid grid-cols-[1fr_auto] items-center gap-2">
                 <p className="text-lg font-extrabold text-[#00176b]">
-                  +$1,150.00
+                  +&#2547; 1,150.00
                 </p>
                 <span className="rounded-full bg-green-100 px-2 py-1 text-[10px] font-bold text-green-700">
                   Completed
@@ -155,7 +155,7 @@ const Payments = () => {
               </div>
               <div className="grid grid-cols-[1fr_auto] items-center gap-2">
                 <p className="text-lg font-extrabold text-[#00176b]">
-                  +$500.00
+                  +&#2547; 500.00
                 </p>
                 <span className="rounded-full bg-green-100 px-2 py-1 text-[10px] font-bold text-green-700">
                   Completed
@@ -192,7 +192,7 @@ const Payments = () => {
               </div>
               <div className="grid grid-cols-[1fr_auto] items-center gap-2">
                 <p className="text-lg font-extrabold text-[#00176b]">
-                  +$7,560.80
+                  +&#2547; 7,560.80
                 </p>
                 <span className="rounded-full bg-green-100 px-2 py-1 text-[10px] font-bold text-green-700">
                   Completed

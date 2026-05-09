@@ -128,7 +128,7 @@ const ProjectPortfolio = () => {
                     Earnings
                   </p>
                   <p className="text-xl font-extrabold text-slate-950">
-                    $3,200
+                      &#2547; 3,200
                   </p>
                 </div>
                 <button className="justify-self-end rounded-xl bg-slate-100 p-2 text-[#00176b] active:scale-95 transition">
@@ -166,7 +166,7 @@ const ProjectPortfolio = () => {
                     Potential
                   </p>
                   <p className="text-xl font-extrabold text-slate-950">
-                    $8,900
+                    &#2547; 8,900
                   </p>
                 </div>
                 <button className="justify-self-end rounded-xl bg-slate-100 p-2 text-[#00176b] active:scale-95 transition">
@@ -245,7 +245,7 @@ const ProjectPortfolio = () => {
                     Booking Deposit
                   </span>
                 </div>
-                <span className="text-sm font-extrabold">$1,500.00</span>
+                <span className="text-sm font-extrabold">&#2547; 1,500.00</span>
               </div>
 
               <div className="grid grid-cols-[1fr_auto] items-center gap-3">
@@ -255,7 +255,7 @@ const ProjectPortfolio = () => {
                     Construction Milestone
                   </span>
                 </div>
-                <span className="text-sm font-extrabold">$2,000.00</span>
+                <span className="text-sm font-extrabold">&#2547; 2,000.00</span>
               </div>
 
               <div className="grid grid-cols-[1fr_auto] items-center gap-3">
@@ -263,7 +263,7 @@ const ProjectPortfolio = () => {
                   <div className="h-2 w-2 rounded-full bg-slate-300" />
                   <span className="text-sm text-slate-600">Handover Bonus</span>
                 </div>
-                <span className="text-sm font-extrabold">$1,000.00</span>
+                <span className="text-sm font-extrabold">&#2547; 1,000.00</span>
               </div>
 
               <div className="grid grid-cols-[1fr_auto] items-center border-t border-slate-100 pt-5">
@@ -271,7 +271,7 @@ const ProjectPortfolio = () => {
                   Total Commission
                 </span>
                 <span className="text-base font-extrabold text-[#00176b]">
-                  $4,500.00
+                  &#2547; 4,500.00
                 </span>
               </div>
             </div>

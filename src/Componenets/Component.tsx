@@ -20,10 +20,11 @@ function Component() {
               menu
             </span>
           </button>
-
-          <h1 className="text-sm font-semibold font-['Goldman'] text-[#07277f] tracking-tight">
-            UNIFLEX LIMITED
-          </h1>
+          <Link to="../component/profile">
+            <h1 className="text-sm font-semibold font-['Goldman'] text-[#07277f] tracking-tight">
+              UNIFLEX LIMITED
+            </h1>
+          </Link>
         </div>
 
         <div className="flex items-center gap-3">

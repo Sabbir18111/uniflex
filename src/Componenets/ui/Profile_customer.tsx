@@ -1,11 +1,26 @@
-import { Link } from "react-router";
+import React from "react";
+import { Link, useLocation } from "react-router";
 import img from "../../assets/images/download.jpg";
-const Profile = () => {
+
+const Profile_Customer = () => {
+  const location = useLocation();
+
+  const {
+    customerName,
+    customerId,
+    customerDate,
+    customerBalance,
+
+  } = location.state || {};
+
   return (
     <div className="bg-white min-h-screen pb-24 font-sans text-slate-950">
       <main className="mx-auto w-full max-w-107.5 px-4 py-8 space-y-6">
+        
+        {/* PROFILE SECTION (NO DESIGN CHANGE) */}
         <section className="grid grid-cols-1 rounded-xl bg-white  -mt-9 p-6">
           <div className="grid grid-cols-[96px_1fr] items-center gap-5">
+            
             <div className="relative">
               <img
                 alt="Agent Profile"
@@ -16,127 +31,56 @@ const Profile = () => {
 
             <div className="">
               <h2 className="text-h2 leading-6 font-extrabold text-[#00176b] tracking-tight ">
-                Mr. Hasan Rohaman Tarek
+                {customerName || "Mohammad Hasan Sajjad"}
               </h2>
+
               <div className="mt-2 flex items-center gap-2">
                 <span className="rounded-full bg-blue-50 border border-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
-                  Marketing Officer
+                 Customer
                 </span>
-                <span className="text-sm text-slate-400">ID: MO0084</span>
+
+                <span className="text-sm text-slate-400">
+                  ID: {customerId || "UC000120"}
+                </span>
               </div>
-              <div className="mt-4 grid grid-cols-2 gap-3"></div>
+
+              <div className="mt-2 text-sm text-slate-400">
+                {customerDate || ""}
+              </div>
             </div>
+
           </div>
         </section>
 
+        {/* BALANCE SECTION (NO DESIGN CHANGE) */}
         <section className="rounded-xl bg-[#263f96] p-6 text-white shadow-lg -mt-10">
-          <p className="text-sm text-white/45 font-medium">Wallet Balance</p>
-        <Link to="/component/payment" className="text-sm font-medium text-white/70 underline mt-1">
-          <h3 className="mt-1 text-[38px] leading-none font-extrabold tracking-tight text-[#9cb4ff]">
-            &#2547; 42,850.00
-          </h3>
+          <p className="text-sm text-white/45 font-medium">
+            Account Balance
+          </p>
+
+          <Link
+            to="/component/payment"
+            className="text-sm font-medium text-white/70 underline mt-1"
+          >
+            <h3 className="mt-1 text-[38px] leading-none font-extrabold tracking-tight text-[#9cb4ff]">
+              {customerBalance || "442,850.00"}
+            </h3>
           </Link>
+
           <div className="mt-6 flex items-center gap-2 text-emerald-300">
             <span className="material-symbols-outlined text-[23px]">
               trending_up
             </span>
-            <span className="text-sm font-bold">+12.5% this month</span>
+            <span className="text-sm font-bold">
+              +12.5% this month
+            </span>
           </div>
         </section>
 
-        <section className="grid grid-cols-2 gap-4">
-          <Link
-              to="/component/customer"
-            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100 active:scale-[0.98] transition"
-          >
-            <div className="w-10 h-10 rounded-lg bg-blue-100 grid place-items-center text-blue-600">
-              <span className="material-symbols-outlined text-[23px]">
-                history
-              </span>
-            </div>
-            <span className="text-sm leading-4 font-medium text-[#00176b]">
-              Customer
-              <br />
-              History
-            </span>
-          </Link>
+        {/* MENU SECTION (NO CHANGE) */}
 
-          <Link
-            to="/component/employee"
-            
-            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center border border-blue-100 gap-3 active:scale-[0.98] transition"
-          >
-            <div className="w-10 h-10 rounded-lg bg-indigo-100 grid place-items-center text-indigo-600">
-              <span className="material-symbols-outlined text-[23px]">
-                account_tree
-              </span>
-            </div>
-            <span className="text-sm leading-4 font-medium text-[#00176b]">
-              Employee
-              <br />
-              Tree
-            </span>
-          </Link>
-
-          <Link
-            to="/component/setting"
-            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100 active:scale-[0.98] transition"
-          >
-            {" "}
-            <div className="w-10 h-10 rounded-lg bg-slate-100 grid place-items-center text-slate-600">
-              <span className="material-symbols-outlined text-[23px]">
-                settings
-              </span>
-            </div>
-            <span className="text-sm leading-4 font-medium text-[#00176b]">
-              Settings
-            </span>
-          </Link>
-
-          <Link
-            to="/component/commission"
-            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100 active:scale-[0.98] transition"
-          >
-            <div className="w-10 h-10 rounded-lg bg-blue-100 grid place-items-center text-blue-600">
-              <span className="material-symbols-outlined text-[23px]">
-                payments
-              </span>
-            </div>
-
-            <span className="text-sm leading-4 font-medium text-[#00176b]">
-              Commission
-            </span>
-          </Link>
-
-          <Link
-            to="/component/achievement"
-            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100 active:scale-[0.98] transition"
-          >
-            <div className="w-10 h-10 rounded-lg bg-blue-100 grid place-items-center text-blue-600">
-              <span className="material-symbols-outlined text-[23px]">
-                workspace_premium
-              </span>
-            </div>
-
-            <span className="text-sm leading-4 font-medium text-[#00176b]">
-              Achievement
-            </span>
-          </Link>
-          <Link
-            to="/component/logout"
-            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100 active:scale-[0.98] transition"
-          >
-            <div className="w-10 h-10 rounded-lg bg-red-100 grid place-items-center text-red-600">
-              <span className="material-symbols-outlined text-[23px]">
-                logout
-              </span>
-            </div>
-            <span className="text-sm leading-4 font-medium text-[#00176b]">
-              Logout
-            </span>
-          </Link>
-        </section>
-
+        {/* TRANSACTION SECTION (UNCHANGED COMPLETELY) */}
+        
         <section className="overflow-hidden rounded-xl bg-white border border-blue-100 ">
           <div className="p-6 flex items-center justify-between">
             <h3 className="text-xl font-extrabold text-[#00176b]">
@@ -263,6 +207,7 @@ const Profile = () => {
             </button>
           </div>
         </section>
+
       </main>
 
       <footer className="py-8 mb-16 flex justify-center opacity-70">
@@ -274,4 +219,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Profile_Customer;

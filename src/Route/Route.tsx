@@ -12,6 +12,8 @@ import Component from "../Componenets/Component";
 import Setting from "../Componenets/ui/Setting";
 import Customer from "../Componenets/ui/Customer";
 import Employee from "../Componenets/ui/Employee";
+import Profile_Customer from "../Componenets/ui/Profile_customer";
+import Payment_History from "../Componenets/ui/Payment_history";
 
 
 
@@ -31,7 +33,10 @@ const AppRoute = () => {
           <Route path="payment" element={<Payment />} />
           <Route path="setting" element={< Setting/>} />
           <Route path="customer" element={< Customer/>} />
-          <Route path="Employee" element={<Employee />} /> {/* Default route for unmatched paths */}
+          <Route path="Employee" element={<Employee />} />
+          <Route path="Profile_Customer" element={<Profile_Customer />} />
+          <Route path="payment_history" element={<Payment_History />} />
+           {/* Default route for unmatched paths */}
         </Route>
 
     </Routes>

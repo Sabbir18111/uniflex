@@ -1,26 +1,18 @@
-import React from "react";
 import { Link, useLocation } from "react-router";
 import img from "../../assets/images/download.jpg";
 
 const Profile_Customer = () => {
   const location = useLocation();
 
-  const {
-    customerName,
-    customerId,
-    customerDate,
-    customerBalance,
-
-  } = location.state || {};
+  const { customerName, customerId, customerDate, customerBalance } =
+    location.state || {};
 
   return (
     <div className="bg-white min-h-screen pb-24 font-sans text-slate-950">
       <main className="mx-auto w-full max-w-107.5 px-4 py-8 space-y-6">
-        
         {/* PROFILE SECTION (NO DESIGN CHANGE) */}
         <section className="grid grid-cols-1 rounded-xl bg-white  -mt-9 p-6">
           <div className="grid grid-cols-[96px_1fr] items-center gap-5">
-            
             <div className="relative">
               <img
                 alt="Agent Profile"
@@ -36,7 +28,7 @@ const Profile_Customer = () => {
 
               <div className="mt-2 flex items-center gap-2">
                 <span className="rounded-full bg-blue-50 border border-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
-                 Customer
+                  Customer
                 </span>
 
                 <span className="text-sm text-slate-400">
@@ -48,15 +40,12 @@ const Profile_Customer = () => {
                 {customerDate || ""}
               </div>
             </div>
-
           </div>
         </section>
 
         {/* BALANCE SECTION (NO DESIGN CHANGE) */}
         <section className="rounded-xl bg-[#263f96] p-6 text-white shadow-lg -mt-10">
-          <p className="text-sm text-white/45 font-medium">
-            Account Balance
-          </p>
+          <p className="text-sm text-white/45 font-medium">Account Balance</p>
 
           <Link
             to="/component/payment"
@@ -71,16 +60,14 @@ const Profile_Customer = () => {
             <span className="material-symbols-outlined text-[23px]">
               trending_up
             </span>
-            <span className="text-sm font-bold">
-              +12.5% this month
-            </span>
+            <span className="text-sm font-bold">+12.5% this month</span>
           </div>
         </section>
 
         {/* MENU SECTION (NO CHANGE) */}
 
         {/* TRANSACTION SECTION (UNCHANGED COMPLETELY) */}
-        
+
         <section className="overflow-hidden rounded-xl bg-white border border-blue-100 ">
           <div className="p-6 flex items-center justify-between">
             <h3 className="text-xl font-extrabold text-[#00176b]">
@@ -207,7 +194,6 @@ const Profile_Customer = () => {
             </button>
           </div>
         </section>
-
       </main>
 
       <footer className="py-8 mb-16 flex justify-center opacity-70">

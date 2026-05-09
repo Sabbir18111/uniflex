@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Logo from "../assets/images/uniflex_logo_con (1).png";
 function AuthLayout() {
   return (
     <div>
@@ -7,7 +8,7 @@ function AuthLayout() {
           <img
             alt="UNIFLEX Logo"
             className="h-24 w-24 object-contain"
-            src="/src/assets/images/uniflex_logo_con (1).png"
+            src={Logo}
           />
         </div>
         <h1 className="mt-2 text-center font-['Goldman'] text-[28px] font-medium leading-tight text-[#00176b]">

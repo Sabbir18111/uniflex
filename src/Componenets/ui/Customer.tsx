@@ -1,5 +1,3 @@
-import React from "react";
-
 function CustomerHistory() {
   const history = [
     { id: "INV-1001", name: "Sabbir Ahmed", date: "08 May", amount: "$120", status: "Paid" },

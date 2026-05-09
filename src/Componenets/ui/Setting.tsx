@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { ChangeEvent } from "react";
 
 function Setting() {
   const [image, setImage] = useState("https://i.pravatar.cc/150?img=12");
@@ -7,8 +8,8 @@ function Setting() {
   const [showNamePopup, setShowNamePopup] = useState(true);
   const [showPasswordPopup, setShowPasswordPopup] = useState(false);
 
-  const handleImage = (e) => {
-    const file = e.target.files[0];
+  const handleImage = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
     if (file) {
       setImage(URL.createObjectURL(file));
     }

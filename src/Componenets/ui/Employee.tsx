@@ -1,7 +1,14 @@
 import { useState } from "react";
 
+type EmployeeNode = {
+  name: string;
+  role: string;
+  color: string;
+  children?: EmployeeNode[];
+};
+
 function EmployeeTree() {
-  const employees = {
+  const employees: EmployeeNode = {
     name: "Sabbir Ahmed",
     role: "CEO",
     color: "bg-blue-600",
@@ -85,7 +92,7 @@ function EmployeeTree() {
     ],
   };
 
-  const EmployeeCard = ({ employee }) => {
+  const EmployeeCard = ({ employee }: { employee: EmployeeNode }) => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -127,7 +134,7 @@ function EmployeeTree() {
         {/* Children */}
         {open && employee.children && (
           <div className="ml-6 mt-4 border-l-2 border-dashed border-gray-300 pl-4 space-y-4">
-            {employee.children.map((child, index) => (
+            {employee.children.map((child: EmployeeNode, index: number) => (
               <EmployeeCard key={index} employee={child} />
             ))}
           </div>

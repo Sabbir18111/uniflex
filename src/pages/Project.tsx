@@ -66,7 +66,8 @@ const ProjectPortfolio = () => {
                     </span>
                     <p className="text-sm truncate mt-4">
                       Fareast Tower, (Level-12) 35 Topkhana Road
-                      <br />urana Paltan, Dhaka - 1000.
+                      <br />
+                      urana Paltan, Dhaka - 1000.
                     </p>
                   </div>
                 </div>
@@ -128,7 +129,7 @@ const ProjectPortfolio = () => {
                     Earnings
                   </p>
                   <p className="text-xl font-extrabold text-slate-950">
-                      &#2547; 3,200
+                    &#2547; 3,200
                   </p>
                 </div>
                 <button className="justify-self-end rounded-xl bg-slate-100 p-2 text-[#00176b] active:scale-95 transition">

@@ -20,7 +20,7 @@ function Component() {
               menu
             </span>
           </button>
-          <Link to="../component/profile">
+          <Link to="../profile">
             <h1 className="text-sm font-semibold font-['Goldman'] text-[#07277f] tracking-tight">
               UNIFLEX LIMITED
             </h1>
@@ -90,7 +90,7 @@ function Component() {
               </Link>
 
               <Link
-                to="/component/booking"
+                to="/booking"
                 onClick={closeSidebar}
                 className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
               >
@@ -143,7 +143,7 @@ function Component() {
               </Link>
 
               <Link
-                to="/component/employee-tree"
+                to="/employee-tree"
                 onClick={closeSidebar}
                 className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
               >
@@ -151,7 +151,7 @@ function Component() {
               </Link>
 
               <Link
-                to="/component/all-customer"
+                to="/all-customer"
                 onClick={closeSidebar}
                 className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
               >
@@ -159,7 +159,7 @@ function Component() {
               </Link>
 
               <Link
-                to="/component/customer-payment"
+                to="/customer-payment"
                 onClick={closeSidebar}
                 className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
               >
@@ -211,7 +211,7 @@ function Component() {
               </Link>
 
               <Link
-                to="/component/payment"
+                to="/payment"
                 onClick={closeSidebar}
                 className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
               >
@@ -219,7 +219,7 @@ function Component() {
               </Link>
 
               <Link
-                to="/component/customer-payment"
+                to="/customer-payment"
                 onClick={closeSidebar}
                 className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
               >
@@ -237,7 +237,7 @@ function Component() {
         <div className="mx-auto grid h-full max-w-107.5 grid-cols-4 items-center gap-2">
           <Link
             className="mx-auto flex flex-col items-center justify-center rounded-xl px-3 py-1 text-blue-700"
-            to="/component/profile"
+            to="/profile"
           >
             <span className="material-symbols-outlined text-h3">dashboard</span>
 
@@ -246,7 +246,7 @@ function Component() {
 
           <Link
             className="mx-auto flex flex-col items-center justify-center text-slate-400"
-            to="/component/project"
+            to="/project"
           >
             <span className="material-symbols-outlined text-h3">
               assignment
@@ -257,7 +257,7 @@ function Component() {
 
           <Link
             className="mx-auto flex flex-col items-center justify-center text-slate-400"
-            to="/component/booking"
+            to="/booking"
           >
             <span className="material-symbols-outlined text-h3">
               event_available
@@ -268,7 +268,7 @@ function Component() {
 
           <Link
             className="mx-auto flex flex-col items-center justify-center text-slate-400"
-            to="/component/setting"
+            to="/setting"
           >
             <span className="material-symbols-outlined text-h3">
               account_circle

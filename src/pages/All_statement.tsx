@@ -25,7 +25,7 @@ function AllStatement() {
     },
   ];
 
-  const typeColor = (type) => {
+  const typeColor = (type: string | string[]) => {
     if (type.includes("Cash")) return "bg-green-100 text-green-700";
     if (type.includes("Bank")) return "bg-blue-100 text-blue-700";
     if (type.includes("bKash")) return "bg-pink-100 text-pink-700";

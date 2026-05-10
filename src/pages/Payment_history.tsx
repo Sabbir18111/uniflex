@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const PaymentHistoryMobile = () => {
   const data = [
     {
@@ -6,8 +8,8 @@ const PaymentHistoryMobile = () => {
       plotPrice: 4125000,
       bookingMoney: 100000,
       downPayment: 0,
-      installment: 0,
-      totalPaid: 100000,
+      installment: 100000,
+      totalPaid: 400000,
       remaining: 4025000,
       lastDate: "15 Sep 2025",
       khata: 5,
@@ -30,18 +32,21 @@ const PaymentHistoryMobile = () => {
           {data.map((item, i) => (
             <div
               key={i}
-              className="rounded-2xl shadow-md  bg-white overflow-hidden"
+              className="rounded-2xl border border-blue-100 bg-white overflow-hidden"
             >
               {/* Top ID + Button */}
-              <div className="flex justify-between items-center px-4 py-3 bg-slate-50">
+              <div className="flex justify-between items-center px-4 py-3 bg-slate-50 rounded-lg">
+                {/* Customer ID */}
                 <div>
                   <p className="text-[11px] text-gray-500">Customer ID</p>
                   <p className="font-bold text-blue-700">{item.id}</p>
                 </div>
 
-                <button className="text-xs bg-blue-600 text-white px-3 py-1 rounded-lg">
-                  Receipt
-                </button>
+                {/* Installment No */}
+                <div className="text-right">
+                  <p className="text-[11px] text-gray-500">Installment No</p>
+                  <p className="font-bold text-blue-700">05</p>
+                </div>
               </div>
 
               {/* Name */}
@@ -134,7 +139,7 @@ const PaymentHistoryMobile = () => {
               <br />
               Details
             </span>
-            <span>Type</span>
+            <span>Money Receipt</span>
           </div>
 
           <div className="divide-y divide-slate-100">
@@ -163,9 +168,11 @@ const PaymentHistoryMobile = () => {
                 </p>
                 <p className="mt-1 text-sm text-slate-400">TRX-7729103</p>
               </div>
-              <span className="justify-self-start rounded-md bg-green-50 px-2 py-1 text-[11px] font-extrabold text-green-700">
-                CREDIT
-              </span>
+              <Link to="/money_receipt">
+                <button className="px-4 py-2 text-[15px] font-extrabold bg-blue-50 text-blue-900 rounded-[8px]">
+                  View
+                </button>
+              </Link>
             </div>
 
             <div className="grid grid-cols-[82px_1fr_74px] items-center px-6 py-5">
@@ -191,9 +198,11 @@ const PaymentHistoryMobile = () => {
                 </p>
                 <p className="mt-1 text-sm text-slate-400">TRX-7728841</p>
               </div>
-              <span className="justify-self-start rounded-md bg-red-50 px-2 py-1 text-[11px] font-extrabold text-red-700">
-                DEBIT
-              </span>
+              <Link to="/money_receipt">
+                <button className="px-4 py-2 text-[15px] font-extrabold bg-blue-50 text-blue-900 rounded-[8px]">
+                  View
+                </button>
+              </Link>
             </div>
 
             <div className="grid grid-cols-[82px_1fr_74px] items-center px-6 py-5">
@@ -219,17 +228,19 @@ const PaymentHistoryMobile = () => {
                 </p>
                 <p className="mt-1 text-sm text-slate-400">TRX-7725519</p>
               </div>
-              <span className="justify-self-start rounded-md bg-green-50 px-2 py-1 text-[11px] font-extrabold text-green-700">
-                CREDIT
-              </span>
+              <Link to="/money_receipt">
+                <button className="px-4 py-2 text-[15px] font-extrabold bg-blue-50 text-blue-900 rounded-[8px]">
+                  View
+                </button>
+              </Link>
             </div>
           </div>
 
-          <div className="p-6 text-center">
-            <button className="text-sm font-medium text-secondary">
+          <Link to="/all_statement">
+            <button className="text-sm font-bold text-blue-700">
               View Full Statement
             </button>
-          </div>
+          </Link>
         </section>
       </div>
     </div>

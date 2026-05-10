@@ -2,78 +2,77 @@ import { Link } from "react-router";
 
 function CustomerHistory() {
   const history = [
-    {
-      id: "INV-1001",
-      name: "Sabbir Ahmed",
-      date: "08 May",
-      amount: "৳120",
-      status: "Paid",
-    },
-    {
-      id: "INV-1002",
-      name: "Rakib Hasan",
-      date: "07 May",
-      amount: "৳85",
-      status: "Pending",
-    },
-    {
-      id: "INV-1003",
-      name: "Nusrat Jahan",
-      date: "06 May",
-      amount: "৳210",
-      status: "Paid",
-    },
-    {
-      id: "INV-1004",
-      name: "Tanvir Rana",
-      date: "05 May",
-      amount: "৳45",
-      status: "Cancelled",
-    },
-    {
-      id: "INV-1005",
-      name: "Ruku Khatun",
-      date: "04 May",
-      amount: "৳99",
-      status: "Paid",
-    },
-    {
-      id: "INV-1006",
-      name: "Anika Akter",
-      date: "03 May",
-      amount: "৳150",
-      status: "Pending",
-    },
-    {
-      id: "INV-1007",
-      name: "Abir Mahmud",
-      date: "02 May",
-      amount: "৳60",
-      status: "Paid",
-    },
-    {
-      id: "INV-1008",
-      name: "Jannat Islam",
-      date: "01 May",
-      amount: "৳300",
-      status: "Paid",
-    },
-    {
-      id: "INV-1009",
-      name: "Fahim Khan",
-      date: "30 Apr",
-      amount: "৳40",
-      status: "Cancelled",
-    },
-    {
-      id: "INV-1010",
-      name: "Shila Roy",
-      date: "29 Apr",
-      amount: "৳75",
-      status: "Pending",
-    },
-  ];
-
+  {
+    customerId: "CUS-SAB-1001",
+    name: "Sabbir Ahmed",
+    landSize: "3 Khata",
+    amount: "৳1200000",
+    status: "Paid",
+  },
+  {
+    customerId: "CUS-RAK-1002",
+    name: "Rakib Hasan",
+    landSize: "5 Khata",
+    amount: "৳800525",
+    status: "Pending",
+  },
+  {
+    customerId: "CUS-NUS-1003",
+    name: "Nusrat Jahan",
+    landSize: "2.5 Khata",
+    amount: "৳2102744",
+    status: "Paid",
+  },
+  {
+    customerId: "CUS-TAN-1004",
+    name: "Tanvir Rana",
+    landSize: "7 Khata",
+    amount: "৳4523111",
+    status: "Cancelled",
+  },
+  {
+    customerId: "CUS-RUK-1005",
+    name: "Ruku Khatun",
+    landSize: "4 Khata",
+    amount: "৳990000",
+    status: "Paid",
+  },
+  {
+    customerId: "CUS-ANI-1006",
+    name: "Anika Akter",
+    landSize: "6 Khata",
+    amount: "৳1500000",
+    status: "Pending",
+  },
+  {
+    customerId: "CUS-ABI-1007",
+    name: "Abir Mahmud",
+    landSize: "2 Khata",
+    amount: "৳600000",
+    status: "Paid",
+  },
+  {
+    customerId: "CUS-JAN-1008",
+    name: "Jannat Islam",
+    landSize: "8 Khata",
+    amount: "৳300000",
+    status: "Paid",
+  },
+  {
+    customerId: "CUS-FAH-1009",
+    name: "Fahim Khan",
+    landSize: "1.5 Khata",
+    amount: "৳4001424",
+    status: "Cancelled",
+  },
+  {
+    customerId: "CUS-SHI-1010",
+    name: "Shila Roy",
+    landSize: "4.5 Khata",
+    amount: "৳7500004",
+    status: "Pending",
+  },
+];
   return (
     <div className="w-full min-h-screen flex justify-center bg-gray-50">
       <div className="w-107 min-h-screen bg-white flex flex-col">
@@ -108,8 +107,8 @@ function CustomerHistory() {
                     to="/profile_customer"
                     state={{
                       customerName: item.name,
-                      customerId: item.id,
-                      customerDate: item.date,
+                     customerId: item.customerId,
+                      customerLandSize: item.landSize,
                       customerBalance: item.amount,
                       customerStatus: item.status,
                     }}
@@ -134,8 +133,8 @@ function CustomerHistory() {
                 </div>
 
                 <div className="mt-2 flex justify-between text-xs text-gray-500">
-                  <span>{item.id}</span>
-                  <span>{item.date}</span>
+                  <span>{item.customerId}</span>
+                  <span>{item.landSize}</span>
                 </div>
 
                 <div className="mt-3 flex justify-between items-center">

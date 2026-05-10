@@ -187,11 +187,11 @@ const Profile_Customer = () => {
             </div>
           </div>
 
-          <div className="p-6 text-center">
-            <button className="text-sm font-medium text-secondary">
+          <Link to="all_statement">
+            <button className="text-sm font-bold text-blue-700">
               View Full Statement
             </button>
-          </div>
+          </Link>
         </section>
       </main>
 

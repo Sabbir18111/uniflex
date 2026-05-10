@@ -14,7 +14,8 @@ import Employee from "../pages/Employee";
 import Profile_Customer from "../pages/Profile_customer";
 import Payment_History from "../pages/Payment_history";
 import Commission from "../pages/Commission";
-
+import Money_receipt from "../pages/Money_receipt";
+import All_Statement from "../pages/All_statement";
 const AppRoute = () => {
   return (
     <Routes>
@@ -35,6 +36,8 @@ const AppRoute = () => {
         <Route path="profile_customer" element={<Profile_Customer />} />
         <Route path="payment_history" element={<Payment_History />} />
         <Route path="commission" element={<Commission />} />
+        <Route path="Money_receipt" element={<Money_receipt />} />
+        <Route path="all_statement" element={<All_Statement />} />
         {/* Default route for unmatched paths */}
       </Route>
     </Routes>

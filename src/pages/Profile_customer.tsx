@@ -8,7 +8,7 @@ const Profile_Customer = () => {
   const data = [
     {
       id: "UC00514",
-      name: "Dr. Md. Delower Hossain",
+      name: "Mohammad Hasan Sajjad",
       plotPrice: 4125000,
       bookingMoney: 100000,
       downPayment: 0,

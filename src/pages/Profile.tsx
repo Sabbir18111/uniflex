@@ -94,7 +94,7 @@ const Profile = () => {
 
             <div>
               <h2 className="text-h2 leading-6 font-extrabold text-[#00176b] tracking-tight">
-                Mr. Hasan Rohaman Tarek
+                Mr. Hasan Rohaman Sajjad
               </h2>
 
               <div className="mt-2 flex items-center gap-2">
@@ -134,12 +134,13 @@ const Profile = () => {
         <section className="grid grid-cols-2 gap-4">
           <Link
             to="/customer"
-            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100"
+            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100 active:scale-[0.98] transition"
           >
             <div className="w-10 h-10 rounded-lg bg-blue-100 grid place-items-center text-blue-600">
-              <span className="material-symbols-outlined">history</span>
+              <span className="material-symbols-outlined text-[23px]">
+                history
+              </span>
             </div>
-
             <span className="text-sm leading-4 font-medium text-[#00176b]">
               Customer
               <br />
@@ -149,19 +150,79 @@ const Profile = () => {
 
           <Link
             to="/employee"
-            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center border border-blue-100 gap-3"
+            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center border border-blue-100 gap-3 active:scale-[0.98] transition"
           >
             <div className="w-10 h-10 rounded-lg bg-indigo-100 grid place-items-center text-indigo-600">
-              <span className="material-symbols-outlined">account_tree</span>
+              <span className="material-symbols-outlined text-[23px]">
+                account_tree
+              </span>
             </div>
-
             <span className="text-sm leading-4 font-medium text-[#00176b]">
               Employee
               <br />
               Tree
             </span>
           </Link>
+
+          <Link
+            to="/setting"
+            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100 active:scale-[0.98] transition"
+          >
+            {" "}
+            <div className="w-10 h-10 rounded-lg bg-slate-100 grid place-items-center text-slate-600">
+              <span className="material-symbols-outlined text-[23px]">
+                settings
+              </span>
+            </div>
+            <span className="text-sm leading-4 font-medium text-[#00176b]">
+              Settings
+            </span>
+          </Link>
+
+          <Link
+            to="../commission"
+            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100 active:scale-[0.98] transition"
+          >
+            <div className="w-10 h-10 rounded-lg bg-blue-100 grid place-items-center text-blue-600">
+              <span className="material-symbols-outlined text-[23px]">
+                payments
+              </span>
+            </div>
+
+            <span className="text-sm leading-4 font-medium text-[#00176b]">
+              Commission
+            </span>
+          </Link>
+
+          <Link
+            to="/component/achievement"
+            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100 active:scale-[0.98] transition"
+          >
+            <div className="w-10 h-10 rounded-lg bg-blue-100 grid place-items-center text-blue-600">
+              <span className="material-symbols-outlined text-[23px]">
+                workspace_premium
+              </span>
+            </div>
+
+            <span className="text-sm leading-4 font-medium text-[#00176b]">
+              Achievement
+            </span>
+          </Link>
+          <Link
+            to="/"
+            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100 active:scale-[0.98] transition"
+          >
+            <div className="w-10 h-10 rounded-lg bg-red-100 grid place-items-center text-red-600">
+              <span className="material-symbols-outlined text-[23px]">
+                logout
+              </span>
+            </div>
+            <span className="text-sm leading-4 font-medium text-[#00176b]">
+              Logout
+            </span>
+          </Link>
         </section>
+
 
         {/* Customer Card */}
         <aside className="grid grid-cols-1 gap-5">

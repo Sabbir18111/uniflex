@@ -34,7 +34,7 @@ const Payments = () => {
               <span className="material-symbols-outlined text-[21px]">
                 payments
               </span>
-              Payout Now
+              Payment Request
             </button>
        </Link>
           </div>

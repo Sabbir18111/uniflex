@@ -45,7 +45,7 @@ function CommissionPage() {
             <div className="bg-white rounded-3xl p-4 shadow-sm">
               <p className="text-gray-500 text-sm">Pending</p>
               <h2 className="text-xl font-bold text-orange-500 mt-1">
-                ৳18,500
+                ৳28,500
               </h2>
             </div>
           </div>

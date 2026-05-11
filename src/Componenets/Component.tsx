@@ -233,6 +233,9 @@ function Component() {
       <main className="pt-14">
         <Outlet />
       </main>
+
+
+      
       <nav className="mx-auto w-full max-w-106 fixed bottom-0 left-0 right-0 z-50 h-16 bg-white/90 backdrop-blur-xl border-t border-slate-100 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
         <div className="mx-auto grid h-full max-w-107.5 grid-cols-4 items-center gap-2">
           <Link

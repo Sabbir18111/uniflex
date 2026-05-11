@@ -1,3 +1,4 @@
+import img from "../assets/images/2024-06-06.webp";
 const ProjectPortfolio = () => {
   return (
     <div className="bg-white min-h-screen pb-24 font-sans text-slate-950 -mt-5">
@@ -47,7 +48,7 @@ const ProjectPortfolio = () => {
               <img
                 className="h-full w-full object-cover"
                 alt="Luxury Residency Phase II"
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"
+                src={img}
               />
             </div>
 
@@ -100,12 +101,10 @@ const ProjectPortfolio = () => {
               </div>
             </div>
           </article>
-
-          <div className="grid grid-cols-1 gap-4"></div>
         </section>
       </main>
 
-      <footer className="py-8 mb-16 flex justify-center border-t border-slate-100 opacity-70">
+      <footer className="py-4 flex justify-center border-t border-slate-100 opacity-70">
         <p className="text-[10px] font-mono tracking-wider uppercase text-slate-400">
           Developed by HSBLCO V2.1
         </p>

@@ -57,10 +57,10 @@ const Profile_Customer = () => {
 
         {/* BALANCE SECTION (NO DESIGN CHANGE) */}
         <section className="rounded-xl bg-[#263f96] p-6 text-white -mt-10">
-          <p className="text-sm text-white/45 font-medium">Account Balance</p>
+          <p className="text-sm text-white/45 font-medium">Due Balance</p>
 
           <Link
-            to="/payment"
+            to="/customerpayment"
             className="text-sm font-medium text-white/70 underline mt-1"
           >
             <h3 className="mt-1 text-[38px] leading-none font-extrabold tracking-tight text-[#9cb4ff]">
@@ -312,7 +312,7 @@ const Profile_Customer = () => {
         </div>
       </main>
 
-      <footer className="py- flex justify-center opacity-70">
+      <footer className="py-4 flex justify-center opacity-70">
         <p className="text-[11px] font-mono tracking-wider text-slate-400">
           Developed by HSBLCO V2.1
         </p>

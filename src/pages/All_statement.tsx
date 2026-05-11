@@ -48,7 +48,7 @@ function AllStatement() {
           {statements.map((item, i) => (
             <div
               key={i}
-              className="relative bg-white border border-slate-100 rounded-2xl shadow-sm p-4 pl-6"
+              className="relative bg-white border border-slate-100 rounded-2xl p-4 pl-6"
             >
               {/* LEFT DOT TIMELINE */}
               <div className="absolute left-2 top-6 w-2 h-2 bg-blue-600 rounded-full"></div>
@@ -94,7 +94,7 @@ function AllStatement() {
 
         {/* BUTTON */}
         <div className="p-4 mt-auto">
-          <Link to="/paymenthistory">
+          <Link to="/profilecustomer">
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold">
               Back
             </button>

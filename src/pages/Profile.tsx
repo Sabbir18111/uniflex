@@ -139,135 +139,107 @@ const Profile = () => {
           </Link>
         </section>
 
-        <section className="overflow-hidden rounded-xl bg-white border border-blue-100 ">
-          <div className="p-6 flex items-center justify-between">
-            <h3 className="text-xl font-extrabold text-[#00176b]">
-              Transaction History
-            </h3>
-            <div className="flex items-center gap-4 text-slate-400">
-              <button className="active:scale-95 transition">
-                <span className="material-symbols-outlined text-[22px]">
-                  filter_list
+      <aside className="grid grid-cols-1 gap-5">
+          <section className="relative overflow-hidden rounded-3xl bg-[#07277f] p-6 text-white shadow-xl">
+            <div className="absolute -right-12 -top-12 h-28 w-28 rounded-full bg-white/10" />
+
+            <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-blue-200">
+              Current Focus Details
+            </p>
+
+            <div className="mt-5 grid grid-cols-[56px_1fr] items-center gap-4">
+              <div className="h-14 w-14 rounded-2xl bg-white/10 border border-white/20 grid place-items-center">
+                <span className="material-symbols-outlined text-[30px]">
+                  person
                 </span>
-              </button>
-              <button className="active:scale-95 transition">
-                <span className="material-symbols-outlined text-[22px]">
-                  download
+              </div>
+              <div>
+                <p className="text-sm text-blue-200">Main Stakeholder</p>
+                <h3 className="text-xl font-extrabold leading-6">
+                  Jonathan Sterling
+                </h3>
+              </div>
+            </div>
+
+            <div className="mt-6 grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-[auto_1fr] items-center gap-3">
+                <span className="material-symbols-outlined text-blue-300">
+                  calendar_today
                 </span>
-              </button>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-[82px_1fr_74px] bg-slate-50 px-6 py-4 text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500">
-            <span>
-              Date
-              <br />& Time
-            </span>
-            <span>
-              Transaction
-              <br />
-              Details
-            </span>
-            <span>Type</span>
-          </div>
-
-          <div className="divide-y divide-slate-100">
-            <div className="grid grid-cols-[82px_1fr_74px] items-center px-6 py-5">
-              <div>
-                <p className="text-sm leading-6 text-[#00176b]">
-                  Oct
-                  <br />
-                  24,
-                  <br />
-                  2023
-                </p>
-                <p className="text-xs leading-4 text-slate-400">
-                  02:45
-                  <br />
-                  PM
-                </p>
+                <div>
+                  <p className="text-[10px] uppercase font-extrabold text-blue-300">
+                    Project Timeline
+                  </p>
+                  <p className="text-sm">Oct 2023 - Jun 2024</p>
+                </div>
               </div>
-              <div className="min-w-0">
-                <p className="text-lg leading-7 font-medium text-[#00176b]">
-                  Commission:
-                  <br />
-                  Project
-                  <br />
-                  Phoenix
-                </p>
-                <p className="mt-1 text-sm text-slate-400">TRX-7729103</p>
+
+              <div className="grid grid-cols-[auto_1fr] items-center gap-3">
+                <span className="material-symbols-outlined text-blue-300">
+                  payments
+                </span>
+                <div>
+                  <p className="text-[10px] uppercase font-extrabold text-blue-300">
+                    Payment Structure
+                  </p>
+                  <p className="text-sm">Tiered / 3 Milestones</p>
+                </div>
               </div>
-              <span className="justify-self-start rounded-md bg-green-50 px-2 py-1 text-[11px] font-extrabold text-green-700">
-                CREDIT
-              </span>
             </div>
 
-            <div className="grid grid-cols-[82px_1fr_74px] items-center px-6 py-5">
-              <div>
-                <p className="text-sm leading-6 text-[#00176b]">
-                  Oct
-                  <br />
-                  22,
-                  <br />
-                  2023
-                </p>
-                <p className="text-xs leading-4 text-slate-400">
-                  11:15
-                  <br />
-                  AM
-                </p>
-              </div>
-              <div className="min-w-0">
-                <p className="text-lg leading-7 font-medium text-[#00176b]">
-                  Withdrawal
-                  <br />
-                  to Bank
-                </p>
-                <p className="mt-1 text-sm text-slate-400">TRX-7728841</p>
-              </div>
-              <span className="justify-self-start rounded-md bg-red-50 px-2 py-1 text-[11px] font-extrabold text-red-700">
-                DEBIT
-              </span>
-            </div>
-
-            <div className="grid grid-cols-[82px_1fr_74px] items-center px-6 py-5">
-              <div>
-                <p className="text-sm leading-6 text-[#00176b]">
-                  Oct
-                  <br />
-                  19,
-                  <br />
-                  2023
-                </p>
-                <p className="text-xs leading-4 text-slate-400">
-                  09:00
-                  <br />
-                  AM
-                </p>
-              </div>
-              <div className="min-w-0">
-                <p className="text-lg leading-7 font-medium text-[#00176b]">
-                  Booking Fee:
-                  <br />
-                  Client A
-                </p>
-                <p className="mt-1 text-sm text-slate-400">TRX-7725519</p>
-              </div>
-              <span className="justify-self-start rounded-md bg-green-50 px-2 py-1 text-[11px] font-extrabold text-green-700">
-                CREDIT
-              </span>
-            </div>
-          </div>
-
-          <div className="p-6 text-center">
-            <button className="text-sm font-medium text-secondary">
-              View Full Statement
+            <button className="mt-6 h-12 w-full rounded-2xl bg-sky-300 text-sm font-extrabold text-[#00176b] shadow-lg active:scale-[0.98] transition">
+              Contact Client
             </button>
-          </div>
-        </section>
+          </section>
+
+          <section className="rounded-3xl bg-white border border-blue-100 p-5">
+            <h3 className="text-xl font-extrabold text-[#00176b]">
+              Earnings Breakdown
+            </h3>
+
+            <div className="mt-5 grid grid-cols-1 gap-5">
+              <div className="grid grid-cols-[1fr_auto] items-center gap-3">
+                <div className="grid grid-cols-[auto_1fr] items-center gap-3">
+                  <div className="h-2 w-2 rounded-full bg-green-500" />
+                  <span className="text-sm text-slate-600">
+                    Booking Deposit
+                  </span>
+                </div>
+                <span className="text-sm font-extrabold">&#2547; 1,500.00</span>
+              </div>
+
+              <div className="grid grid-cols-[1fr_auto] items-center gap-3">
+                <div className="grid grid-cols-[auto_1fr] items-center gap-3">
+                  <div className="h-2 w-2 rounded-full bg-[#07277f]" />
+                  <span className="text-sm text-slate-600">
+                    Construction Milestone
+                  </span>
+                </div>
+                <span className="text-sm font-extrabold">&#2547; 2,000.00</span>
+              </div>
+
+              <div className="grid grid-cols-[1fr_auto] items-center gap-3">
+                <div className="grid grid-cols-[auto_1fr] items-center gap-3">
+                  <div className="h-2 w-2 rounded-full bg-slate-300" />
+                  <span className="text-sm text-slate-600">Handover Bonus</span>
+                </div>
+                <span className="text-sm font-extrabold">&#2547; 1,000.00</span>
+              </div>
+
+              <div className="grid grid-cols-[1fr_auto] items-center border-t border-slate-100 pt-5">
+                <span className="text-base font-extrabold text-[#00176b]">
+                  Total Commission
+                </span>
+                <span className="text-base font-extrabold text-[#00176b]">
+                  &#2547; 4,500.00
+                </span>
+              </div>
+            </div>
+          </section>
+        </aside>
       </main>
 
-      <footer className="py-8 mb-16 flex justify-center opacity-70">
+      <footer className="py-4 flex justify-center opacity-70">
         <p className="text-[11px] font-mono tracking-wider text-slate-400">
           Developed by HSBLCO V2.1
         </p>

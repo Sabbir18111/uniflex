@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Payments = () => {
   return (
     <div className="bg-white mx-auto w-full max-w-107.5 min-h-screen pb-24 font-sans text-slate-950">
@@ -12,7 +14,7 @@ const Payments = () => {
                 <span className="material-symbols-outlined text-body-lg">
                   account_balance_wallet
                 </span>
-                Available Balance
+                Due Balance
               </p>
               <h2 className="mt-2 text-numeral-xl leading-none font-extrabold tracking-tight text-[#00176b]">
                 &#2547;12,450.80
@@ -27,25 +29,15 @@ const Payments = () => {
               </div>
             </div>
 
+       <Link to="/paymenthistory">
             <button className="h-13 w-full rounded-2xl bg-linear-to-r from-[#07277f] to-blue-700 text-white font-extrabold shadow-lg grid grid-cols-[auto_auto] items-center justify-center gap-2 active:scale-[0.98] transition">
               <span className="material-symbols-outlined text-[21px]">
                 payments
               </span>
-              Request Payout
+              Payout Now
             </button>
+       </Link>
           </div>
-        </section>
-
-        <section className="grid grid-flow-col auto-cols-max gap-2 overflow-x-auto border-b border-slate-200 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <button className="px-5 py-3 text-sm font-extrabold text-[#00176b] border-b-2 border-[#07277f]">
-            Paid
-          </button>
-          <button className="px-5 py-3 text-sm font-extrabold text-slate-500">
-            Pending
-          </button>
-          <button className="px-5 py-3 text-sm font-extrabold text-slate-500">
-            Failed
-          </button>
         </section>
 
         <section className="grid grid-cols-1 gap-4">

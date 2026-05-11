@@ -187,7 +187,7 @@ const Profile_Customer = () => {
             </div>
           </div>
 
-          <Link to="all_statement">
+          <Link to="allstatement">
             <button className="text-sm font-bold text-blue-700">
               View Full Statement
             </button>

@@ -74,7 +74,7 @@ function Component() {
 
             <span className="flex-1 text-left">Project</span>
 
-            <span className="material-symbols-outlined text-[18px]">
+            <span className="material-symbols-outlined text-body-lg">
               {openMenu === "project" ? "expand_more" : "chevron_right"}
             </span>
           </button>
@@ -127,7 +127,7 @@ function Component() {
 
             <span className="flex-1 text-left">HRM</span>
 
-            <span className="material-symbols-outlined text-[18px]">
+            <span className="material-symbols-outlined text-body-lg">
               {openMenu === "hrm" ? "expand_more" : "chevron_right"}
             </span>
           </button>
@@ -187,7 +187,7 @@ function Component() {
 
             <span className="flex-1 text-left">Accounts Management</span>
 
-            <span className="material-symbols-outlined text-[18px]">
+            <span className="material-symbols-outlined text-body-lg">
               {openMenu === "accounts" ? "expand_more" : "chevron_right"}
             </span>
           </button>

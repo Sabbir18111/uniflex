@@ -168,8 +168,8 @@ const PaymentHistoryMobile = () => {
                 </p>
                 <p className="mt-1 text-sm text-slate-400">TRX-7729103</p>
               </div>
-              <Link to="/money_receipt">
-                <button className="px-4 py-2 text-[15px] font-extrabold bg-blue-50 text-blue-900 rounded-[8px]">
+              <Link to="/moneyreceipt">
+                <button className="px-4 py-2 text-[15px] font-extrabold bg-blue-50 text-blue-900 rounded-lg">
                   View
                 </button>
               </Link>
@@ -198,8 +198,8 @@ const PaymentHistoryMobile = () => {
                 </p>
                 <p className="mt-1 text-sm text-slate-400">TRX-7728841</p>
               </div>
-              <Link to="/money_receipt">
-                <button className="px-4 py-2 text-[15px] font-extrabold bg-blue-50 text-blue-900 rounded-[8px]">
+              <Link to="/moneyreceipt">
+                <button className="px-4 py-2 text-[15px] font-extrabold bg-blue-50 text-blue-900 rounded-lg">
                   View
                 </button>
               </Link>
@@ -228,16 +228,15 @@ const PaymentHistoryMobile = () => {
                 </p>
                 <p className="mt-1 text-sm text-slate-400">TRX-7725519</p>
               </div>
-              <Link to="/money_receipt">
+              <Link to="/moneyreceipt">
                 <button className="px-4 py-2 text-[15px] font-extrabold bg-blue-50 text-blue-900 rounded-[8px]">
                   View
                 </button>
               </Link>
             </div>
           </div>
-
-          <Link to="/all_statement">
-            <button className="text-sm font-bold text-blue-700">
+          <Link to="/allstatement" className="px-6 py-4 flex justify-center bg-gray-100">
+            <button className="font-bold text-blue-700 ">
               View Full Statement
             </button>
           </Link>

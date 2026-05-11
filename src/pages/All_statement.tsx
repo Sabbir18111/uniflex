@@ -28,17 +28,15 @@ function AllStatement() {
   const typeColor = (type: string | string[]) => {
     if (type.includes("Cash")) return "bg-green-100 text-green-700";
     if (type.includes("Bank")) return "bg-blue-100 text-blue-700";
-    if (type.includes("bKash")) return "bg-pink-100 text-pink-700";
+    if (type.includes("Getway")) return "bg-pink-100 text-pink-700";
     return "bg-gray-100 text-gray-700";
   };
 
   return (
     <div className="w-full min-h-screen bg-slate-100 flex justify-center">
-
-      <div className="w-[428px] min-h-screen bg-white flex flex-col">
-
+      <div className="w-107 min-h-screen bg-white flex flex-col">
         {/* HEADER */}
-        <div className="bg-gradient-to-r from-blue-900 to-indigo-800 text-white px-5 py-6">
+        <div className="bg-linear-to-r from-blue-900 to-indigo-800 text-white px-5 py-6">
           <h1 className="text-xl font-bold">Statement History</h1>
           <p className="text-xs opacity-80 mt-1">
             All payment transactions overview
@@ -47,20 +45,17 @@ function AllStatement() {
 
         {/* TIMELINE LIST */}
         <div className="p-4 space-y-4">
-
           {statements.map((item, i) => (
             <div
               key={i}
               className="relative bg-white border border-slate-100 rounded-2xl shadow-sm p-4 pl-6"
             >
-
               {/* LEFT DOT TIMELINE */}
               <div className="absolute left-2 top-6 w-2 h-2 bg-blue-600 rounded-full"></div>
-              <div className="absolute left-2 top-0 bottom-0 w-[1px] bg-slate-200"></div>
+              <div className="absolute left-2 top-0 bottom-0 w-px bg-slate-200"></div>
 
               {/* TOP ROW */}
               <div className="flex justify-between items-start">
-
                 <div>
                   <p className="text-[11px] text-slate-400">{item.date}</p>
                   <h2 className="text-sm font-bold text-blue-900">
@@ -70,17 +65,15 @@ function AllStatement() {
 
                 <span
                   className={`text-[10px] px-2 py-1 rounded-full font-semibold ${typeColor(
-                    item.type
+                    item.type,
                   )}`}
                 >
                   {item.type}
                 </span>
-
               </div>
 
               {/* BOTTOM ROW */}
               <div className="flex justify-between items-center mt-3">
-
                 <div className="text-xs text-slate-500">
                   Installment No:{" "}
                   <span className="font-semibold text-slate-700">
@@ -94,23 +87,19 @@ function AllStatement() {
                     ৳{item.due.toLocaleString()}
                   </p>
                 </div>
-
               </div>
-
             </div>
           ))}
-
         </div>
 
         {/* BUTTON */}
         <div className="p-4 mt-auto">
-          <Link to="/payment_history">
+          <Link to="/paymenthistory">
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold">
               Back
             </button>
           </Link>
         </div>
-
       </div>
     </div>
   );

@@ -33,11 +33,11 @@ const AppRoute = () => {
         <Route path="setting" element={<Setting />} />
         <Route path="customer" element={<Customer />} />
         <Route path="employee" element={<Employee />} />
-        <Route path="profile_customer" element={<Profile_Customer />} />
-        <Route path="payment_history" element={<Payment_History />} />
+        <Route path="profilecustomer" element={<Profile_Customer />} />
+        <Route path="paymenthistory" element={<Payment_History />} />
         <Route path="commission" element={<Commission />} />
-        <Route path="Money_receipt" element={<Money_receipt />} />
-        <Route path="all_statement" element={<All_Statement />} />
+        <Route path="Moneyreceipt" element={<Money_receipt />} />
+        <Route path="allstatement" element={<All_Statement />} />
         {/* Default route for unmatched paths */}
       </Route>
     </Routes>

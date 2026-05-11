@@ -134,8 +134,8 @@ function EmployeeTree() {
         {/* Children */}
         {open && employee.children && (
           <div className="ml-6 mt-4 border-l-2 border-dashed border-gray-300 pl-4 space-y-4">
-            {employee.children.map((child: EmployeeNode, index: number) => (
-              <EmployeeCard key={index} employee={child} />
+            {employee.children.map((item) => (
+              <EmployeeCard key={item.role} employee={item} />
             ))}
           </div>
         )}

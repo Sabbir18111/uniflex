@@ -2,77 +2,77 @@ import { Link } from "react-router";
 
 function CustomerHistory() {
   const history = [
-  {
-    customerId: "CUS-SAB-1001",
-    name: "Sabbir Ahmed",
-    landSize: "3 Khata",
-    amount: "৳1200000",
-    status: "Paid",
-  },
-  {
-    customerId: "CUS-RAK-1002",
-    name: "Rakib Hasan",
-    landSize: "5 Khata",
-    amount: "৳800525",
-    status: "Pending",
-  },
-  {
-    customerId: "CUS-NUS-1003",
-    name: "Nusrat Jahan",
-    landSize: "2.5 Khata",
-    amount: "৳2102744",
-    status: "Paid",
-  },
-  {
-    customerId: "CUS-TAN-1004",
-    name: "Tanvir Rana",
-    landSize: "7 Khata",
-    amount: "৳4523111",
-    status: "Cancelled",
-  },
-  {
-    customerId: "CUS-RUK-1005",
-    name: "Ruku Khatun",
-    landSize: "4 Khata",
-    amount: "৳990000",
-    status: "Paid",
-  },
-  {
-    customerId: "CUS-ANI-1006",
-    name: "Anika Akter",
-    landSize: "6 Khata",
-    amount: "৳1500000",
-    status: "Pending",
-  },
-  {
-    customerId: "CUS-ABI-1007",
-    name: "Abir Mahmud",
-    landSize: "2 Khata",
-    amount: "৳600000",
-    status: "Paid",
-  },
-  {
-    customerId: "CUS-JAN-1008",
-    name: "Jannat Islam",
-    landSize: "8 Khata",
-    amount: "৳300000",
-    status: "Paid",
-  },
-  {
-    customerId: "CUS-FAH-1009",
-    name: "Fahim Khan",
-    landSize: "1.5 Khata",
-    amount: "৳4001424",
-    status: "Cancelled",
-  },
-  {
-    customerId: "CUS-SHI-1010",
-    name: "Shila Roy",
-    landSize: "4.5 Khata",
-    amount: "৳7500004",
-    status: "Pending",
-  },
-];
+    {
+      customerId: "CUS-SAB-1001",
+      name: "Sabbir Ahmed",
+      landSize: "3 Khata",
+      amount: "৳1200000",
+      status: "Paid",
+    },
+    {
+      customerId: "CUS-RAK-1002",
+      name: "Rakib Hasan",
+      landSize: "5 Khata",
+      amount: "৳800525",
+      status: "Pending",
+    },
+    {
+      customerId: "CUS-NUS-1003",
+      name: "Nusrat Jahan",
+      landSize: "2.5 Khata",
+      amount: "৳2102744",
+      status: "Paid",
+    },
+    {
+      customerId: "CUS-TAN-1004",
+      name: "Tanvir Rana",
+      landSize: "7 Khata",
+      amount: "৳4523111",
+      status: "Cancelled",
+    },
+    {
+      customerId: "CUS-RUK-1005",
+      name: "Ruku Khatun",
+      landSize: "4 Khata",
+      amount: "৳990000",
+      status: "Paid",
+    },
+    {
+      customerId: "CUS-ANI-1006",
+      name: "Anika Akter",
+      landSize: "6 Khata",
+      amount: "৳1500000",
+      status: "Pending",
+    },
+    {
+      customerId: "CUS-ABI-1007",
+      name: "Abir Mahmud",
+      landSize: "2 Khata",
+      amount: "৳600000",
+      status: "Paid",
+    },
+    {
+      customerId: "CUS-JAN-1008",
+      name: "Jannat Islam",
+      landSize: "8 Khata",
+      amount: "৳300000",
+      status: "Paid",
+    },
+    {
+      customerId: "CUS-FAH-1009",
+      name: "Fahim Khan",
+      landSize: "1.5 Khata",
+      amount: "৳4001424",
+      status: "Cancelled",
+    },
+    {
+      customerId: "CUS-SHI-1010",
+      name: "Shila Roy",
+      landSize: "4.5 Khata",
+      amount: "৳7500004",
+      status: "Pending",
+    },
+  ];
   return (
     <div className="w-full min-h-screen flex justify-center bg-gray-50">
       <div className="w-107 min-h-screen bg-white flex flex-col">
@@ -86,8 +86,11 @@ function CustomerHistory() {
         <div className="p-5 space-y-6 relative">
           <div className="absolute left-7 top-6 bottom-6 w-0.5 bg-gray-200"></div>
 
-          {history.map((item, index) => (
-            <div key={index} className="flex items-start gap-4 relative">
+          {history.map((item) => (
+            <div
+              key={item.customerId}
+              className="flex items-start gap-4 relative"
+            >
               {/* Dot */}
               <div
                 className={`w-4 h-4 rounded-full mt-1 z-10 border-2 border-white shadow
@@ -104,10 +107,10 @@ function CustomerHistory() {
               <div className="flex-1 bg-white border border-gray-100 rounded-xl p-4 shadow-sm hover:shadow-md transition">
                 <div className="flex justify-between items-center">
                   <Link
-                    to="/profile_customer"
+                    to="/profilecustomer"
                     state={{
                       customerName: item.name,
-                     customerId: item.customerId,
+                      customerId: item.customerId,
                       customerLandSize: item.landSize,
                       customerBalance: item.amount,
                       customerStatus: item.status,
@@ -139,7 +142,7 @@ function CustomerHistory() {
 
                 <div className="mt-3 flex justify-between items-center">
                   <p className="font-bold text-blue-600">{item.amount}</p>
-                  <Link to="/payment_history">
+                  <Link to="/paymenthistory">
                     <button className="text-[10px] bg-indigo-600 text-white px-3 py-1 rounded-md">
                       Payment Details
                     </button>

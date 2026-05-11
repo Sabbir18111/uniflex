@@ -16,7 +16,7 @@ import Payment_History from "../pages/Payment_history";
 import Commission from "../pages/Commission";
 import Money_receipt from "../pages/Money_receipt";
 import All_Statement from "../pages/All_statement";
-import Customerpayment from "../pages/customerpayment";
+import Customerpayment from "../pages/Customerpayment";
 const AppRoute = () => {
   return (
     <Routes>

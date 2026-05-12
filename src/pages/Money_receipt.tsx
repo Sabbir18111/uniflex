@@ -44,7 +44,7 @@ function MoneyReceipt() {
           {/* Company */}
           <div className="text-center">
             <div className="w-14 h-14 mx-auto rounded-full border flex items-center justify-center text-[10px]">
-             <img src={img} alt="" />
+              <img src={img} alt="" />
             </div>
 
             <h2 className="font-bold text-[13px] mt-1">UNIFLEX LIMITED</h2>

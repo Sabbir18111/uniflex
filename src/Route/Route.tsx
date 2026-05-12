@@ -13,11 +13,12 @@ import Customer from "../pages/Customer";
 import Employee from "../pages/Employee";
 import Profile_Customer from "../pages/Profile_customer";
 import Payment_History from "../pages/Payment_history";
-import Commission from "../pages/Commission";
+import Commission from "../pages/commission/Commission";
 import Money_receipt from "../pages/Money_receipt";
 import All_Statement from "../pages/All_statement";
 import Customerpayment from "../pages/Customerpayment";
 import Achievement from "../pages/Achievement";
+import Paymentrequest from "../pages/paymentrequest";
 const AppRoute = () => {
   return (
     <Routes>
@@ -42,6 +43,7 @@ const AppRoute = () => {
         <Route path="allstatement" element={<All_Statement />} />
         <Route path="customerpayment" element={<Customerpayment />} />
         <Route path="achievement" element={<Achievement />} />
+        <Route path="request" element={<Paymentrequest />} />
         {/* Default route for unmatched paths */}
       </Route>
     </Routes>

@@ -14,7 +14,7 @@ const Payments = () => {
                 <span className="material-symbols-outlined text-body-lg">
                   account_balance_wallet
                 </span>
-                Due Balance
+                Current Balance
               </p>
               <h2 className="mt-2 text-numeral-xl leading-none font-extrabold tracking-tight text-[#00176b]">
                 &#2547;12,450.80
@@ -29,14 +29,14 @@ const Payments = () => {
               </div>
             </div>
 
-       <Link to="/paymenthistory">
-            <button className="h-13 w-full rounded-2xl bg-linear-to-r from-[#07277f] to-blue-700 text-white font-extrabold shadow-lg grid grid-cols-[auto_auto] items-center justify-center gap-2 active:scale-[0.98] transition">
-              <span className="material-symbols-outlined text-[21px]">
-                payments
-              </span>
-              Payment Request
-            </button>
-       </Link>
+            <Link to="/request">
+              <button className="h-13 w-full rounded-2xl bg-linear-to-r from-[#07277f] to-blue-700 text-white font-extrabold shadow-lg grid grid-cols-[auto_auto] items-center justify-center gap-2 active:scale-[0.98] transition">
+                <span className="material-symbols-outlined text-[21px]">
+                  payments
+                </span>
+                Payment Request
+              </button>
+            </Link>
           </div>
         </section>
 

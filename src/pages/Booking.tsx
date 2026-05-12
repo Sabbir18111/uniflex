@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const BookingManagement = () => {
   return (
     <div className="bg-white mx-auto w-full max-w-107.5 min-h-screen pb-24 font-sans text-slate-950">
@@ -75,12 +77,14 @@ const BookingManagement = () => {
             </div>
 
             <div className="grid grid-cols-[1fr_auto] gap-2">
-              <button className="h-11 rounded-xl bg-[#07277f] text-white font-bold grid grid-cols-[auto_auto] items-center justify-center gap-2 active:scale-[0.98] transition">
-                <span className="material-symbols-outlined text-body-lg">
-                  check_circle
-                </span>
-                Confirm
-              </button>
+              <Link to="/Moneyreceipt">
+                <button className="h-11 w-70  rounded-xl bg-[#07277f] text-white font-bold grid grid-cols-[auto_auto] items-center justify-center gap-2 active:scale-[0.98] transition">
+                  <span className="material-symbols-outlined text-body-lg">
+                    check_circle
+                  </span>
+                  View
+                </button>
+              </Link>
               <button className="h-11 w-12 rounded-xl border border-red-200 text-red-600 grid place-items-center active:scale-95 transition">
                 <span className="material-symbols-outlined text-body-lg">
                   close
@@ -181,7 +185,7 @@ const BookingManagement = () => {
                 <span className="material-symbols-outlined text-body-lg">
                   check_circle
                 </span>
-                Confirm
+                View
               </button>
               <button className="h-11 w-12 rounded-xl border border-red-200 text-red-600 grid place-items-center active:scale-95 transition">
                 <span className="material-symbols-outlined text-body-lg">
@@ -212,7 +216,9 @@ const BookingManagement = () => {
                 </span>
               </div>
               <div>
-                <p className="text-xl font-extrabold text-[#00176b]">&#2547; 12,400</p>
+                <p className="text-xl font-extrabold text-[#00176b]">
+                  &#2547; 12,400
+                </p>
                 <p className="text-sm text-slate-500">Pending Settlements</p>
               </div>
             </div>

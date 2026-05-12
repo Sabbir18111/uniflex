@@ -176,7 +176,6 @@ const Dashboard = () => {
           </p>
         </section>
 
-
         <section className="relative min-h-72.5 overflow-hidden rounded-xl bg-[#07277f] p-4 text-white shadow-xl flex items-end">
           <img
             alt="Corporate Growth Background"

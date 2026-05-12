@@ -29,14 +29,14 @@ const Payments = () => {
               </div>
             </div>
 
-       <Link to="/customerpayment">
-            <button className="h-13 w-full rounded-2xl bg-linear-to-r from-[#07277f] to-blue-700 text-white font-extrabold shadow-lg grid grid-cols-[auto_auto] items-center justify-center gap-2 active:scale-[0.98] transition">
-              <span className="material-symbols-outlined text-[21px]">
-                payments
-              </span>
-              Pay Now
-            </button>
-       </Link>
+            <Link to="/customerpayment">
+              <button className="h-13 w-full rounded-2xl bg-linear-to-r from-[#07277f] to-blue-700 text-white font-extrabold shadow-lg grid grid-cols-[auto_auto] items-center justify-center gap-2 active:scale-[0.98] transition">
+                <span className="material-symbols-outlined text-[21px]">
+                  payments
+                </span>
+                Pay Now
+              </button>
+            </Link>
           </div>
         </section>
 

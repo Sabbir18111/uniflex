@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import img from "../assets/images/uniflex_logo_con (1).png";
 
 function Component() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -67,7 +68,7 @@ function Component() {
           <div className="h-14 px-4 flex items-center justify-between border-b border-white/10">
             <div className="flex items-center gap-2">
               <img
-                src="/src/assets/images/uniflex_logo_con (1).png"
+                src={img}
                 alt="UNIFLEX LIMITED"
                 className="w-8 h-8 rounded-full object-cover bg-white"
               />

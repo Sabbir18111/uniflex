@@ -4,6 +4,7 @@ type EmployeeNode = {
   name: string;
   role: string;
   color: string;
+  image?: string;
   children?: EmployeeNode[];
 };
 

@@ -371,6 +371,7 @@ const Profile = () => {
           Developed by HSBLCO V2.1
         </p>
       </footer>
+      
     </div>
   );
 };

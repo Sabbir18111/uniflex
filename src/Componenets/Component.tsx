@@ -82,7 +82,7 @@ function Component() {
           {openMenu === "project" && (
             <div className="ml-8 space-y-1">
               <Link
-                to="/component/project"
+                to="/project"
                 onClick={closeSidebar}
                 className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
               >
@@ -135,7 +135,7 @@ function Component() {
           {openMenu === "hrm" && (
             <div className="ml-8 space-y-1">
               <Link
-                to="/component/booking"
+                to="/booking"
                 onClick={closeSidebar}
                 className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
               >
@@ -143,7 +143,7 @@ function Component() {
               </Link>
 
               <Link
-                to="/employee-tree"
+                to="/employee"
                 onClick={closeSidebar}
                 className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
               >
@@ -151,7 +151,7 @@ function Component() {
               </Link>
 
               <Link
-                to="/all-customer"
+                to="/customer"
                 onClick={closeSidebar}
                 className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
               >
@@ -159,7 +159,7 @@ function Component() {
               </Link>
 
               <Link
-                to="/customer-payment"
+                to="/customerpayment"
                 onClick={closeSidebar}
                 className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
               >
@@ -167,7 +167,7 @@ function Component() {
               </Link>
 
               <Link
-                to="/component/payout-request"
+                to="/payment"
                 onClick={closeSidebar}
                 className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
               >

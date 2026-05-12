@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { Routes, Route } from "react-router-dom"; // Use "react-router" for v7+
 import Login from "../pages/Auth/Login";
 import AuthLayout from "../layout/AuthLayout";

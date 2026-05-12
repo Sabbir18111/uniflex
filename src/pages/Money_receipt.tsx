@@ -60,11 +60,11 @@ function MoneyReceipt() {
 
           {/* Receipt Header */}
           <div className="flex justify-between mt-3">
-            <div className="border border-black px-2 py-[2px] text-[10px] font-bold">
+            <div className="border border-black px-2 py-0.5 text-[10px] font-bold">
               MONEY RECEIPT
             </div>
 
-            <div className="border border-black px-2 py-[2px] text-[10px] font-bold">
+            <div className="border border-black px-2 py-0.5 text-[10px] font-bold">
               CUSTOMER COPY
             </div>
           </div>
@@ -72,7 +72,7 @@ function MoneyReceipt() {
           {/* Information */}
           <div className="grid grid-cols-2 gap-4 mt-3">
             {/* Left Side */}
-            <div className="space-y-[2px]">
+            <div className="space-y-0.5">
               <Info label="Employee UID" value={data.customerId} />
 
               <Info label="Customer Name" value={data.customerName} />
@@ -92,7 +92,7 @@ function MoneyReceipt() {
             </div>
 
             {/* Right Side */}
-            <div className="space-y-[2px] pt-5">
+            <div className="space-y-0.5 pt-5">
               <Info label="Receipt No." value={data.receiptNo} />
 
               <Info label="Receipt Date" value={data.receiptDate} />

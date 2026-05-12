@@ -50,7 +50,7 @@ const Login = () => {
                   </span>
                 </button>
                 <Link
-                  to="/auth/forget"
+                  to="/forget"
                   className="text-xs font-semibold text-secondary hover:underline absolute right-2 top-full mt-1"
                 >
                   Forgot Password?

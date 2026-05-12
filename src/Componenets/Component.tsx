@@ -7,10 +7,13 @@ function Component() {
 
   const closeSidebar = () => setSidebarOpen(false);
 
+  const subMenuClass =
+    "flex items-center gap-2 py-2 px-3 rounded-md text-slate-300 hover:bg-white/10";
+
   return (
-    <div className="mx-auto w-full max-w-107.5 min-h-screen  relative overflow-x-hidden pb-16">
+    <div className="mx-auto w-full max-w-107.5 min-h-screen relative overflow-x-hidden pb-16">
       {/* HEADER */}
-      <header className="fixed top-0 left-1/2 -translate-x-1/2 z-50 h-14 w-full max-w-107.5 bg-white px-3 flex items-center justify-between shadow-sm ">
+      <header className="fixed top-0 left-1/2 -translate-x-1/2 z-50 h-14 w-full max-w-107.5 bg-white px-3 flex items-center justify-between shadow-sm">
         <div className="flex items-center gap-2">
           <button
             onClick={() => setSidebarOpen(true)}
@@ -20,6 +23,7 @@ function Component() {
               menu
             </span>
           </button>
+
           <Link to="../profile">
             <h1 className="text-sm font-semibold font-['Goldman'] text-[#07277f] tracking-tight">
               UNIFLEX LIMITED
@@ -32,210 +36,225 @@ function Component() {
             <span className="material-symbols-outlined text-[#07277f] text-h3">
               notifications
             </span>
-
             <span className="absolute top-2 right-2 h-2 w-2 rounded-full bg-red-500 border-2 border-white" />
           </button>
-
         </div>
       </header>
 
       {/* OVERLAY */}
       <div
         onClick={closeSidebar}
-        className={`absolute inset-0 z-60 bg-black/40 transition-all duration-300 ${
-          sidebarOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        className={`fixed inset-0 left-1/2 -translate-x-1/2 z-60 w-full max-w-107.5 bg-black/40 transition-all duration-300 ${
+          sidebarOpen
+            ? "opacity-100 visible pointer-events-auto"
+            : "opacity-0 invisible pointer-events-none"
         }`}
       />
 
-      {/* SIDEBAR */}
-      <aside
-        className={`absolute top-0 left-0 z-70 h-full w-65.5 bg-[#303840] text-white
-        transition-transform duration-300 ease-out
-        ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
+      {/* SIDEBAR WRAPPER */}
+      <div
+        className={`fixed top-0 left-1/2 -translate-x-1/2 z-70 h-screen w-full max-w-107.5 pointer-events-none transition-all duration-300 overflow-hidden ${
+          sidebarOpen ? "visible" : "invisible"
+        }`}
       >
-        {/* TOP */}
-        <div className="h-14 px-4 flex items-center justify-between border-b border-white/10">
-          <button
-            onClick={closeSidebar}
-            className="w-8 h-8 rounded-full hover:bg-white/10 grid place-items-center right-2 absolute"
-          >
-            <span className="material-symbols-outlined">close</span>
-          </button>
-        </div>
+        {/* SIDEBAR */}
+        <aside
+          className={`h-full w-65.5 bg-[#263F96] text-white pointer-events-auto transition-transform duration-300 ease-out ${
+            sidebarOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          {/* TOP */}
+          <div className="h-14 px-4 flex items-center justify-between border-b border-white/10">
+            <div className="flex items-center gap-2">
+              <img
+                src="/src/assets/images/uniflex_logo_con (1).png"
+                alt="UNIFLEX LIMITED"
+                className="w-8 h-8 rounded-full object-cover bg-white"
+              />
 
-        {/* MENU */}
-        <nav className="p-2 space-y-1 text-sm overflow-y-auto h-[calc(100%-56px)]">
-          {/* PROJECT */}
-          <button
-            onClick={() => setOpenMenu(openMenu === "project" ? "" : "project")}
-            className="w-full h-11 px-3 rounded-md flex items-center gap-3 text-slate-300 hover:bg-white/10"
-          >
-            <span className="material-symbols-outlined">groups</span>
-
-            <span className="flex-1 text-left">Project</span>
-
-            <span className="material-symbols-outlined text-body-lg">
-              {openMenu === "project" ? "expand_more" : "chevron_right"}
-            </span>
-          </button>
-
-          {openMenu === "project" && (
-            <div className="ml-8 space-y-1">
-              <Link
-                to="/project"
-                onClick={closeSidebar}
-                className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
-              >
-                Project
-              </Link>
-
-              <Link
-                to="/booking"
-                onClick={closeSidebar}
-                className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
-              >
-                All Booking
-              </Link>
+              <h1 className="text-sm font-semibold font-['Goldman'] text-white">
+                UNIFLEX LIMITED
+              </h1>
             </div>
-          )}
 
-          {/* WITHDRAW */}
-          <Link
-            to="#"
-            onClick={closeSidebar}
-            className="h-11 px-3 rounded-md flex items-center gap-3 text-slate-300 hover:bg-white/10"
-          >
-            <span className="material-symbols-outlined">payments</span>
-            Withdraw Request
-          </Link>
+            <button
+              onClick={closeSidebar}
+              className="w-8 h-8 rounded-full hover:bg-white/10 grid place-items-center"
+            >
+              <span className="material-symbols-outlined">close</span>
+            </button>
+          </div>
 
-          <Link
-            to="#"
-            onClick={closeSidebar}
-            className="h-11 px-3 rounded-md flex items-center gap-3 text-slate-300 hover:bg-white/10"
-          >
-            <span className="material-symbols-outlined">history</span>
-            Withdraw History
-          </Link>
+          {/* MENU */}
+          <nav className="p-2 space-y-1 text-sm overflow-y-auto h-[calc(100%-56px)]">
+            <button
+              onClick={() =>
+                setOpenMenu(openMenu === "project" ? "" : "project")
+              }
+              className="w-full h-11 px-3 rounded-md flex items-center gap-3 text-slate-300 hover:bg-white/10"
+            >
+              <span className="material-symbols-outlined">folder_managed</span>
+              <span className="flex-1 text-left">Project</span>
+              <span className="material-symbols-outlined text-body-lg">
+                {openMenu === "project" ? "expand_more" : "chevron_right"}
+              </span>
+            </button>
 
-          {/* HRM */}
-          <button
-            onClick={() => setOpenMenu(openMenu === "hrm" ? "" : "hrm")}
-            className="w-full h-11 px-3 rounded-md flex items-center gap-3 text-slate-300 hover:bg-white/10"
-          >
-            <span className="material-symbols-outlined">groups</span>
+            {openMenu === "project" && (
+              <div className="ml-8 space-y-1">
+                <Link to="/project" onClick={closeSidebar} className={subMenuClass}>
+                  <span className="material-symbols-outlined text-base">
+                    assignment
+                  </span>
+                  Project
+                </Link>
 
-            <span className="flex-1 text-left">HRM</span>
+                <Link to="/booking" onClick={closeSidebar} className={subMenuClass}>
+                  <span className="material-symbols-outlined text-base">
+                    event_available
+                  </span>
+                  All Booking
+                </Link>
+              </div>
+            )}
 
-            <span className="material-symbols-outlined text-body-lg">
-              {openMenu === "hrm" ? "expand_more" : "chevron_right"}
-            </span>
-          </button>
+            <Link
+              to="#"
+              onClick={closeSidebar}
+              className="h-11 px-3 rounded-md flex items-center gap-3 text-slate-300 hover:bg-white/10"
+            >
+              <span className="material-symbols-outlined">payments</span>
+              Withdraw Request
+            </Link>
 
-          {openMenu === "hrm" && (
-            <div className="ml-8 space-y-1">
-              <Link
-                to="/booking"
-                onClick={closeSidebar}
-                className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
-              >
-                Booking
-              </Link>
+            <Link
+              to="#"
+              onClick={closeSidebar}
+              className="h-11 px-3 rounded-md flex items-center gap-3 text-slate-300 hover:bg-white/10"
+            >
+              <span className="material-symbols-outlined">history</span>
+              Withdraw History
+            </Link>
 
-              <Link
-                to="/employee"
-                onClick={closeSidebar}
-                className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
-              >
-                Employee Tree
-              </Link>
+            <button
+              onClick={() => setOpenMenu(openMenu === "hrm" ? "" : "hrm")}
+              className="w-full h-11 px-3 rounded-md flex items-center gap-3 text-slate-300 hover:bg-white/10"
+            >
+              <span className="material-symbols-outlined">badge</span>
+              <span className="flex-1 text-left">HRM</span>
+              <span className="material-symbols-outlined text-body-lg">
+                {openMenu === "hrm" ? "expand_more" : "chevron_right"}
+              </span>
+            </button>
 
-              <Link
-                to="/customer"
-                onClick={closeSidebar}
-                className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
-              >
-                All Customer
-              </Link>
+            {openMenu === "hrm" && (
+              <div className="ml-8 space-y-1">
+                <Link to="/booking" onClick={closeSidebar} className={subMenuClass}>
+                  <span className="material-symbols-outlined text-base">
+                    event_available
+                  </span>
+                  Booking
+                </Link>
 
-              <Link
-                to="/customerpayment"
-                onClick={closeSidebar}
-                className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
-              >
-                Customer Payment
-              </Link>
+                <Link to="/employee" onClick={closeSidebar} className={subMenuClass}>
+                  <span className="material-symbols-outlined text-base">
+                    account_tree
+                  </span>
+                  Employee Tree
+                </Link>
 
-              <Link
-                to="/payment"
-                onClick={closeSidebar}
-                className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
-              >
-                PayOut Request
-              </Link>
-            </div>
-          )}
+                <Link to="/customer" onClick={closeSidebar} className={subMenuClass}>
+                  <span className="material-symbols-outlined text-base">
+                    groups
+                  </span>
+                  All Customer
+                </Link>
 
-          {/* ACCOUNTS MANAGEMENT */}
-          <button
-            onClick={() =>
-              setOpenMenu(openMenu === "accounts" ? "" : "accounts")
-            }
-            className="w-full h-11 px-3 rounded-md flex items-center gap-3 text-slate-300 hover:bg-white/10"
-          >
-            <span className="material-symbols-outlined">account_balance</span>
+                <Link
+                  to="/customerpayment"
+                  onClick={closeSidebar}
+                  className={subMenuClass}
+                >
+                  <span className="material-symbols-outlined text-base">
+                    account_balance_wallet
+                  </span>
+                  Customer Payment
+                </Link>
 
-            <span className="flex-1 text-left">Accounts Management</span>
+                <Link to="/payment" onClick={closeSidebar} className={subMenuClass}>
+                  <span className="material-symbols-outlined text-base">
+                    request_quote
+                  </span>
+                  PayOut Request
+                </Link>
+              </div>
+            )}
 
-            <span className="material-symbols-outlined text-body-lg">
-              {openMenu === "accounts" ? "expand_more" : "chevron_right"}
-            </span>
-          </button>
+            <button
+              onClick={() =>
+                setOpenMenu(openMenu === "accounts" ? "" : "accounts")
+              }
+              className="w-full h-11 px-3 rounded-md flex items-center gap-3 text-slate-300 hover:bg-white/10"
+            >
+              <span className="material-symbols-outlined">account_balance</span>
+              <span className="flex-1 text-left">Accounts Management</span>
+              <span className="material-symbols-outlined text-body-lg">
+                {openMenu === "accounts" ? "expand_more" : "chevron_right"}
+              </span>
+            </button>
 
-          {openMenu === "accounts" && (
-            <div className="ml-8 space-y-1">
-              <Link
-                to="/component/income-entry"
-                onClick={closeSidebar}
-                className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
-              >
-                Income Entry
-              </Link>
+            {openMenu === "accounts" && (
+              <div className="ml-8 space-y-1">
+                <Link
+                  to="/component/income-entry"
+                  onClick={closeSidebar}
+                  className={subMenuClass}
+                >
+                  <span className="material-symbols-outlined text-base">
+                    add_card
+                  </span>
+                  Income Entry
+                </Link>
 
-              <Link
-                to="/component/create-pay"
-                onClick={closeSidebar}
-                className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
-              >
-                Create Pay
-              </Link>
+                <Link
+                  to="/component/create-pay"
+                  onClick={closeSidebar}
+                  className={subMenuClass}
+                >
+                  <span className="material-symbols-outlined text-base">
+                    paid
+                  </span>
+                  Create Pay
+                </Link>
 
-              <Link
-                to="/payment"
-                onClick={closeSidebar}
-                className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
-              >
-                Payment
-              </Link>
+                <Link to="/payment" onClick={closeSidebar} className={subMenuClass}>
+                  <span className="material-symbols-outlined text-base">
+                    payments
+                  </span>
+                  Payment
+                </Link>
 
-              <Link
-                to="/customer-payment"
-                onClick={closeSidebar}
-                className="block py-2 px-3 rounded-md text-slate-300 hover:bg-white/10"
-              >
-                Customer Payment
-              </Link>
-            </div>
-          )}
-        </nav>
-      </aside>
+                <Link
+                  to="/customer-payment"
+                  onClick={closeSidebar}
+                  className={subMenuClass}
+                >
+                  <span className="material-symbols-outlined text-base">
+                    receipt_long
+                  </span>
+                  Customer Payment
+                </Link>
+              </div>
+            )}
+          </nav>
+        </aside>
+      </div>
 
       <main className="pt-14">
         <Outlet />
       </main>
 
-
-      
+      {/* BOTTOM NAV */}
       <nav className="mx-auto w-full max-w-106 fixed bottom-0 left-0 right-0 z-50 h-16 bg-white/90 backdrop-blur-xl border-t border-slate-100 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
         <div className="mx-auto grid h-full max-w-107.5 grid-cols-4 items-center gap-2">
           <Link
@@ -243,7 +262,6 @@ function Component() {
             to="/profile"
           >
             <span className="material-symbols-outlined text-h3">dashboard</span>
-
             <span className="mt-1 text-[9px] font-medium">Dashboard</span>
           </Link>
 
@@ -251,10 +269,7 @@ function Component() {
             className="mx-auto flex flex-col items-center justify-center text-slate-400"
             to="/project"
           >
-            <span className="material-symbols-outlined text-h3">
-              assignment
-            </span>
-
+            <span className="material-symbols-outlined text-h3">assignment</span>
             <span className="mt-1 text-[9px] font-medium">Project</span>
           </Link>
 
@@ -265,7 +280,6 @@ function Component() {
             <span className="material-symbols-outlined text-h3">
               event_available
             </span>
-
             <span className="mt-1 text-[9px] font-medium">Booking</span>
           </Link>
 
@@ -276,7 +290,6 @@ function Component() {
             <span className="material-symbols-outlined text-h3">
               account_circle
             </span>
-
             <span className="mt-1 text-[9px] font-medium">Profile</span>
           </Link>
         </div>

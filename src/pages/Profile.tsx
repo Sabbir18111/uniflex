@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 import { useState } from "react";
 import img from "../assets/images/download.jpg";
-
 const Profile = () => {
   const [openType, setOpenType] = useState<string | null>(null);
 
@@ -195,7 +194,7 @@ const Profile = () => {
           </Link>
 
           <Link
-            to="/component/achievement"
+            to="/achievement"
             className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100 active:scale-[0.98] transition"
           >
             <div className="w-10 h-10 rounded-lg bg-blue-100 grid place-items-center text-blue-600">
@@ -222,7 +221,6 @@ const Profile = () => {
             </span>
           </Link>
         </section>
-
 
         {/* Customer Card */}
         <aside className="grid grid-cols-1 gap-5">
@@ -342,7 +340,9 @@ const Profile = () => {
                               <span className="rounded-xl bg-blue-100 w-25 px-3 py-1 text-sm font-extrabold text-[#00176b]">
                                 {customer.amount}
                               </span>
-                              <span className="text-label-md font-semibold ml-4 mt-2 opacity-60 ">{customer.date}</span>
+                              <span className="text-label-md font-semibold ml-4 mt-2 opacity-60 ">
+                                {customer.date}
+                              </span>
                             </div>
                           </div>
                         </div>
@@ -371,7 +371,6 @@ const Profile = () => {
           Developed by HSBLCO V2.1
         </p>
       </footer>
-      
     </div>
   );
 };

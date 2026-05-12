@@ -64,7 +64,7 @@ const Forget = () => {
               </div>
             </div>
 
-            <Link to="/auth/login" className="block">
+            <Link to="/" className="block">
               <button
                 className="flex mt-4 h-14 w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-[#07277f] to-[#263f96] text-lg font-bold text-white shadow-lg active:scale-[0.98] transition-all"
                 type="submit"

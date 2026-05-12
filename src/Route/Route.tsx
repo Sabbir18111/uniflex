@@ -1,4 +1,3 @@
-
 import { Routes, Route } from "react-router-dom"; // Use "react-router" for v7+
 import Login from "../pages/Auth/Login";
 import AuthLayout from "../layout/AuthLayout";
@@ -18,6 +17,7 @@ import Commission from "../pages/Commission";
 import Money_receipt from "../pages/Money_receipt";
 import All_Statement from "../pages/All_statement";
 import Customerpayment from "../pages/Customerpayment";
+import Achievement from "../pages/Achievement";
 const AppRoute = () => {
   return (
     <Routes>
@@ -41,6 +41,7 @@ const AppRoute = () => {
         <Route path="Moneyreceipt" element={<Money_receipt />} />
         <Route path="allstatement" element={<All_Statement />} />
         <Route path="customerpayment" element={<Customerpayment />} />
+        <Route path="achievement" element={<Achievement />} />
         {/* Default route for unmatched paths */}
       </Route>
     </Routes>

@@ -273,8 +273,17 @@ function Component() {
                   </span>
                   Customer Payment
                 </Link>
+
               </div>
             )}
+                <Link
+                  to="/"
+                  onClick={closeSidebar}
+                  className="absolute left-0 bottom-0 w-65.5 mt-auto h-11 px-3 flex items-center  gap-3 text-white bg-red-500"
+                >
+                  <span className="material-symbols-outlined">logout</span>
+                  Logout
+                </Link>
           </nav>
         </aside>
       </div>

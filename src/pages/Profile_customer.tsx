@@ -56,7 +56,7 @@ const Profile_Customer = () => {
         </section>
 
         {/* BALANCE SECTION (NO DESIGN CHANGE) */}
-        <section className="rounded-xl bg-[#263f96] p-6 text-white -mt-10">
+        <header className="rounded-xl bg-[#263f96] p-6 text-white -mt-10">
           <p className="text-sm text-white/45 font-medium">Due Balance</p>
 
           <Link
@@ -74,22 +74,10 @@ const Profile_Customer = () => {
             </span>
             <span className="text-sm font-bold">+12.5% this month</span>
           </div>
-        </section>
+        </header>
 
-        {/* MENU SECTION (NO CHANGE) */}
-
-        {/* TRANSACTION SECTION (UNCHANGED COMPLETELY) */}
         <div className="w-full min-h-screen bg-gray-100 flex justify-center -mt-6">
           <div className="w-107 min-h-screen bg-white flex flex-col">
-            {/* Header (sticky) */}
-            {/* <div className="sticky top-0 z-10 bg-white border-b px-4 py-4">
-          <h1 className="text-lg font-bold text-slate-900">
-            Customer Payment History
-          </h1>
-          <p className="text-xs text-gray-500">Payments of {data[0].name}</p>
-        </div> */}
-
-            {/* Content */}
             <div className="p-4 space-y-4 overflow-y-auto">
               {data.map((item, i) => (
                 <div
@@ -174,139 +162,159 @@ const Profile_Customer = () => {
                 </div>
               ))}
             </div>
-            <section className="overflow-hidden rounded-xl bg-white ">
-              <div className="p-6 flex items-center justify-between">
-                <h3 className="text-xl font-extrabold text-[#00176b]">
-                  Transaction History
-                </h3>
-                <div className="flex items-center gap-4 text-slate-400">
-                  <button className="active:scale-95 transition">
-                    <span className="material-symbols-outlined text-[22px]">
-                      filter_list
+
+
+            
+            <section className="overflow-hidden rounded-[30px] bg-white shadow-sm border border-slate-100">
+              {/* Header */}
+              <div className="flex items-center justify-between px-5 py-5 border-b border-slate-100">
+                <div>
+                  <h3 className="text-h3 font-extrabold text-[#00176b]">
+                    Transaction History
+                  </h3>
+                  <p className="text-[13px] text-slate-400">
+                    Recent payment transactions
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <button className="w-10 h-10 rounded-full bg-slate-100 active:scale-95 transition grid place-items-center">
+                    <span className="material-symbols-outlined text-slate-600">
+                      tune
                     </span>
                   </button>
-                  <button className="active:scale-95 transition">
-                    <span className="material-symbols-outlined text-[22px]">
+
+                  <button className="w-10 h-10 rounded-full bg-slate-100 active:scale-95 transition grid place-items-center">
+                    <span className="material-symbols-outlined text-slate-600">
                       download
                     </span>
                   </button>
                 </div>
               </div>
 
-              <div className="grid grid-cols-[82px_1fr_74px] bg-slate-50 px-6 py-4 text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500">
-                <span>
-                  Date
-                  <br />& Time
-                </span>
-                <span>
-                  Transaction
-                  <br />
-                  Details
-                </span>
-                <span>Money Receipt</span>
+              {/* Transactions */}
+              <div className="p-4 space-y-4">
+                {/* Card 1 */}
+                <div className="rounded-3xl border border-slate-100 bg-[#f8fbff] p-4 shadow-sm">
+                  <div className="flex justify-between gap-3">
+                    {/* Left */}
+                    <div className="flex gap-4">
+                      <div className="w-14 h-14 rounded-2xl bg-blue-100 text-[#00176b] grid place-items-center">
+                        <span className="material-symbols-outlined text-[28px]">
+                          payments
+                        </span>
+                      </div>
+
+                      <div>
+                        <h4 className="text-[17px] font-bold text-[#00176b] leading-6">
+                          Commission Payment
+                        </h4>
+
+                        <p className="text-sm text-slate-500">
+                          Project Phoenix
+                        </p>
+
+                        <p className="text-xs mt-1 text-slate-400">
+                          TRX-7729103
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Date */}
+                    <div className="text-right">
+                      <p className="text-sm font-bold text-[#00176b]">24 Oct</p>
+                      <p className="text-xs text-slate-400">02:45 PM</p>
+                    </div>
+                  </div>
+
+                  <Link to="/moneyreceipt">
+                    <button className="w-full mt-4 py-3 rounded-2xl bg-[#00176b] text-white font-bold active:scale-95 transition">
+                      View Money Receipt
+                    </button>
+                  </Link>
+                </div>
+
+                {/* Card 2 */}
+                <div className="rounded-3xl border border-slate-100 bg-white p-4 shadow-sm">
+                  <div className="flex justify-between gap-3">
+                    <div className="flex gap-4">
+                      <div className="w-14 h-14 rounded-2xl bg-red-100 text-red-600 grid place-items-center">
+                        <span className="material-symbols-outlined text-[28px]">
+                          account_balance
+                        </span>
+                      </div>
+
+                      <div>
+                        <h4 className="text-[17px] font-bold text-[#00176b] leading-6">
+                          Withdrawal to Bank
+                        </h4>
+
+                        <p className="text-sm text-slate-500">DBBL Account</p>
+
+                        <p className="text-xs mt-1 text-slate-400">
+                          TRX-7728841
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="text-right">
+                      <p className="text-sm font-bold text-[#00176b]">22 Oct</p>
+                      <p className="text-xs text-slate-400">11:15 AM</p>
+                    </div>
+                  </div>
+
+                  <Link to="/moneyreceipt">
+                    <button className="w-full mt-4 py-3 rounded-2xl border-2 border-[#00176b] text-[#00176b] font-bold active:scale-95 transition">
+                      View Money Receipt
+                    </button>
+                  </Link>
+                </div>
+
+                {/* Card 3 */}
+                <div className="rounded-3xl border border-slate-100 bg-white p-4 shadow-sm">
+                  <div className="flex justify-between gap-3">
+                    <div className="flex gap-4">
+                      <div className="w-14 h-14 rounded-2xl bg-green-100 text-green-600 grid place-items-center">
+                        <span className="material-symbols-outlined text-[28px]">
+                          receipt_long
+                        </span>
+                      </div>
+
+                      <div>
+                        <h4 className="text-[17px] font-bold text-[#00176b] leading-6">
+                          Booking Fee
+                        </h4>
+
+                        <p className="text-sm text-slate-500">Client A</p>
+
+                        <p className="text-xs mt-1 text-slate-400">
+                          TRX-7725519
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="text-right">
+                      <p className="text-sm font-bold text-[#00176b]">19 Oct</p>
+                      <p className="text-xs text-slate-400">09:00 AM</p>
+                    </div>
+                  </div>
+
+                  <Link to="/moneyreceipt">
+                    <button className="w-full mt-4 py-3 rounded-2xl border-2 border-[#00176b] text-[#00176b] font-bold active:scale-95 transition">
+                      View Money Receipt
+                    </button>
+                  </Link>
+                </div>
               </div>
 
-              <div className="divide-y divide-slate-100">
-                <div className="grid grid-cols-[82px_1fr_74px] items-center px-6 py-5">
-                  <div>
-                    <p className="text-sm leading-6 text-[#00176b]">
-                      Oct
-                      <br />
-                      24,
-                      <br />
-                      2023
-                    </p>
-                    <p className="text-xs leading-4 text-slate-400">
-                      02:45
-                      <br />
-                      PM
-                    </p>
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-lg leading-7 font-medium text-[#00176b]">
-                      Commission:
-                      <br />
-                      Project
-                      <br />
-                      Phoenix
-                    </p>
-                    <p className="mt-1 text-sm text-slate-400">TRX-7729103</p>
-                  </div>
-                  <Link to="/moneyreceipt">
-                    <button className="px-4 py-2 text-[15px] font-extrabold bg-blue-50 text-blue-900 rounded-lg">
-                      View
-                    </button>
-                  </Link>
-                </div>
-
-                <div className="grid grid-cols-[82px_1fr_74px] items-center px-6 py-5">
-                  <div>
-                    <p className="text-sm leading-6 text-[#00176b]">
-                      Oct
-                      <br />
-                      22,
-                      <br />
-                      2023
-                    </p>
-                    <p className="text-xs leading-4 text-slate-400">
-                      11:15
-                      <br />
-                      AM
-                    </p>
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-lg leading-7 font-medium text-[#00176b]">
-                      Withdrawal
-                      <br />
-                      to Bank
-                    </p>
-                    <p className="mt-1 text-sm text-slate-400">TRX-7728841</p>
-                  </div>
-                  <Link to="/moneyreceipt">
-                    <button className="px-4 py-2 text-[15px] font-extrabold bg-blue-50 text-blue-900 rounded-lg">
-                      View
-                    </button>
-                  </Link>
-                </div>
-
-                <div className="grid grid-cols-[82px_1fr_74px] items-center px-6 py-5">
-                  <div>
-                    <p className="text-sm leading-6 text-[#00176b]">
-                      Oct
-                      <br />
-                      19,
-                      <br />
-                      2023
-                    </p>
-                    <p className="text-xs leading-4 text-slate-400">
-                      09:00
-                      <br />
-                      AM
-                    </p>
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-lg leading-7 font-medium text-[#00176b]">
-                      Booking Fee:
-                      <br />
-                      Client A
-                    </p>
-                    <p className="mt-1 text-sm text-slate-400">TRX-7725519</p>
-                  </div>
-                  <Link to="/moneyreceipt">
-                    <button className="px-4 py-2 text-[15px] font-extrabold bg-blue-50 text-blue-900 rounded-[8px]">
-                      View
-                    </button>
-                  </Link>
-                </div>
+              {/* Footer */}
+              <div className="px-5 pb-5">
+                <Link to="/allstatement">
+                  <button className="w-full py-4 rounded-[20px] bg-slate-100 text-[#00176b] font-extrabold active:scale-95 transition">
+                    View Full Statement
+                  </button>
+                </Link>
               </div>
-              <Link
-                to="/allstatement"
-                className="px-6 py-4 flex justify-center bg-gray-100"
-              >
-                <button className="font-bold text-blue-700 ">
-                  View Full Statement
-                </button>
-              </Link>
             </section>
           </div>
         </div>

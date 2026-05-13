@@ -163,7 +163,7 @@ const Profile = () => {
             </span>
           </Link>
 
-          <Link
+          {/* <Link
             to="/setting"
             className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100 active:scale-[0.98] transition"
           >
@@ -176,7 +176,7 @@ const Profile = () => {
             <span className="text-sm leading-4 font-medium text-[#00176b]">
               Settings
             </span>
-          </Link>
+          </Link> */}
 
           <Link
             to="../commission"
@@ -205,19 +205,6 @@ const Profile = () => {
 
             <span className="text-sm leading-4 font-medium text-[#00176b]">
               Achievement
-            </span>
-          </Link>
-          <Link
-            to="/"
-            className="rounded-xl bg-white p-4 min-h-18 grid grid-cols-[40px_1fr] items-center gap-3 border border-blue-100 active:scale-[0.98] transition"
-          >
-            <div className="w-10 h-10 rounded-lg bg-red-100 grid place-items-center text-red-600">
-              <span className="material-symbols-outlined text-[23px]">
-                logout
-              </span>
-            </div>
-            <span className="text-sm leading-4 font-medium text-[#00176b]">
-              Logout
             </span>
           </Link>
         </section>
@@ -365,8 +352,6 @@ const Profile = () => {
           </section>
         </aside>
       </main>
-
-      
     </div>
   );
 };

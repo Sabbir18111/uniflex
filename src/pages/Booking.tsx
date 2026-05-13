@@ -124,29 +124,14 @@ const BookingManagement = () => {
               </span>
             </div>
 
-            <button className="h-11 w-full rounded-xl border border-[#07277f] text-[#07277f] font-bold grid grid-cols-[auto_auto] items-center justify-center gap-2 active:scale-[0.98] transition">
-              <span className="material-symbols-outlined text-body-lg">
-                info
-              </span>
-              View Details
-            </button>
-          </article>
-
-          <article className="relative min-h-57.5 overflow-hidden rounded-2xl bg-[#07277f] shadow-lg">
-            <img
-              alt="Real Estate Concept"
-              className="absolute inset-0 h-full w-full object-cover opacity-35"
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80"
-            />
-            <div className="relative z-10 h-full min-h-57.5 bg-linear-to-t from-[#07277f] via-[#07277f]/70 to-transparent p-6 grid content-end">
-              <h3 className="text-2xl font-extrabold text-white">
-                Grow your network
-              </h3>
-              <p className="mt-2 text-sm leading-5 text-white/80">
-                Manage multiple projects and track your commission growth in
-                real-time with our advanced analytics.
-              </p>
-            </div>
+            <Link to="/Moneyreceipt">
+              <button className="h-11 w-90  rounded-xl border border-gray-400  text-black font-bold grid grid-cols-[auto_auto] items-center justify-center gap-2 active:scale-[0.98] transition">
+                <span className="material-symbols-outlined text-body-lg">
+                  check_circle
+                </span>
+                View
+              </button>
+            </Link>
           </article>
 
           <article className="grid grid-cols-1 gap-5 rounded-2xl bg-white p-5 border border-orange-100 border-l-4 border-l-amber-500">
@@ -181,12 +166,14 @@ const BookingManagement = () => {
             </div>
 
             <div className="grid grid-cols-[1fr_auto] gap-2">
-              <button className="h-11 rounded-xl bg-[#07277f] text-white font-bold grid grid-cols-[auto_auto] items-center justify-center gap-2 active:scale-[0.98] transition">
-                <span className="material-symbols-outlined text-body-lg">
-                  check_circle
-                </span>
-                View
-              </button>
+              <Link to="/Moneyreceipt">
+                <button className="h-11 w-70  rounded-xl bg-[#07277f] text-white font-bold grid grid-cols-[auto_auto] items-center justify-center gap-2 active:scale-[0.98] transition">
+                  <span className="material-symbols-outlined text-body-lg">
+                    check_circle
+                  </span>
+                  View
+                </button>
+              </Link>
               <button className="h-11 w-12 rounded-xl border border-red-200 text-red-600 grid place-items-center active:scale-95 transition">
                 <span className="material-symbols-outlined text-body-lg">
                   close
@@ -233,11 +220,7 @@ const BookingManagement = () => {
         </section>
       </main>
 
-      <footer className="py-4 flex justify-center border-t border-slate-100 opacity-70">
-        <p className="text-[10px] font-mono tracking-wider uppercase text-slate-400">
-          Developed by HSBLCO V2.1
-        </p>
-      </footer>
+      
     </div>
   );
 };

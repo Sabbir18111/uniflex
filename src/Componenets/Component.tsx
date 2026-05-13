@@ -103,14 +103,22 @@ function Component() {
 
             {openMenu === "project" && (
               <div className="ml-8 space-y-1">
-                <Link to="/project" onClick={closeSidebar} className={subMenuClass}>
+                <Link
+                  to="/project"
+                  onClick={closeSidebar}
+                  className={subMenuClass}
+                >
                   <span className="material-symbols-outlined text-base">
                     assignment
                   </span>
                   Project
                 </Link>
 
-                <Link to="/booking" onClick={closeSidebar} className={subMenuClass}>
+                <Link
+                  to="/booking"
+                  onClick={closeSidebar}
+                  className={subMenuClass}
+                >
                   <span className="material-symbols-outlined text-base">
                     event_available
                   </span>
@@ -150,21 +158,33 @@ function Component() {
 
             {openMenu === "hrm" && (
               <div className="ml-8 space-y-1">
-                <Link to="/booking" onClick={closeSidebar} className={subMenuClass}>
+                <Link
+                  to="/booking"
+                  onClick={closeSidebar}
+                  className={subMenuClass}
+                >
                   <span className="material-symbols-outlined text-base">
                     event_available
                   </span>
                   Booking
                 </Link>
 
-                <Link to="/employee" onClick={closeSidebar} className={subMenuClass}>
+                <Link
+                  to="/employee"
+                  onClick={closeSidebar}
+                  className={subMenuClass}
+                >
                   <span className="material-symbols-outlined text-base">
                     account_tree
                   </span>
                   Employee Tree
                 </Link>
 
-                <Link to="/customer" onClick={closeSidebar} className={subMenuClass}>
+                <Link
+                  to="/customer"
+                  onClick={closeSidebar}
+                  className={subMenuClass}
+                >
                   <span className="material-symbols-outlined text-base">
                     groups
                   </span>
@@ -182,7 +202,11 @@ function Component() {
                   Customer Payment
                 </Link>
 
-                <Link to="/payment" onClick={closeSidebar} className={subMenuClass}>
+                <Link
+                  to="/payment"
+                  onClick={closeSidebar}
+                  className={subMenuClass}
+                >
                   <span className="material-symbols-outlined text-base">
                     request_quote
                   </span>
@@ -228,7 +252,11 @@ function Component() {
                   Create Pay
                 </Link>
 
-                <Link to="/payment" onClick={closeSidebar} className={subMenuClass}>
+                <Link
+                  to="/payment"
+                  onClick={closeSidebar}
+                  className={subMenuClass}
+                >
                   <span className="material-symbols-outlined text-base">
                     payments
                   </span>
@@ -254,7 +282,11 @@ function Component() {
       <main className="pt-14">
         <Outlet />
       </main>
-
+      <footer className="py-4 flex justify-center border-t border-slate-100 opacity-70">
+        <p className="text-[10px] font-mono tracking-wider uppercase text-slate-400">
+          Developed by HSBLCO V2.1
+        </p>
+      </footer>
       {/* BOTTOM NAV */}
       <nav className="mx-auto w-full max-w-106 fixed bottom-0 left-0 right-0 z-50 h-16 bg-white/90 backdrop-blur-xl border-t border-slate-100 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
         <div className="mx-auto grid h-full max-w-107.5 grid-cols-4 items-center gap-2">
@@ -270,7 +302,9 @@ function Component() {
             className="mx-auto flex flex-col items-center justify-center text-slate-400"
             to="/project"
           >
-            <span className="material-symbols-outlined text-h3">assignment</span>
+            <span className="material-symbols-outlined text-h3">
+              assignment
+            </span>
             <span className="mt-1 text-[9px] font-medium">Project</span>
           </Link>
 

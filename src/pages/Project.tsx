@@ -103,12 +103,6 @@ const ProjectPortfolio = () => {
           </article>
         </section>
       </main>
-
-      <footer className="py-4 flex justify-center border-t border-slate-100 opacity-70">
-        <p className="text-[10px] font-mono tracking-wider uppercase text-slate-400">
-          Developed by HSBLCO V2.1
-        </p>
-      </footer>
     </div>
   );
 };

@@ -366,11 +366,7 @@ const Profile = () => {
         </aside>
       </main>
 
-      <footer className="py-4 flex justify-center opacity-70">
-        <p className="text-[11px] font-mono tracking-wider text-slate-400">
-          Developed by HSBLCO V2.1
-        </p>
-      </footer>
+      
     </div>
   );
 };

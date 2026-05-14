@@ -199,7 +199,7 @@ const Profile = () => {
           >
             <div className="w-10 h-10 rounded-lg bg-blue-100 grid place-items-center text-blue-600">
               <span className="material-symbols-outlined text-[23px]">
-                workspace_premium
+                workspace_Premium
               </span>
             </div>
 

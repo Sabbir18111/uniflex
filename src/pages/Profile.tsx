@@ -116,7 +116,7 @@ const Profile = () => {
             className="text-sm font-medium text-white/70  mt-1"
           >
             <h3 className="mt-1 text-[38px] leading-none font-extrabold tracking-tight text-[#9cb4ff]">
-              ৳ 42,850.00
+              ৳ 43,850.00
             </h3>
           </Link>
 

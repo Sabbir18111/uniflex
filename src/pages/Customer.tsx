@@ -77,7 +77,7 @@ function CustomerHistory() {
     <div className="w-full min-h-screen flex justify-center bg-gray-50">
       <div className="w-107 min-h-screen bg-white flex flex-col">
         {/* Header */}
-        <div className="p-5 bg-blue-900 text-white">
+        <div className="p-5 bg-[#07277F] text-white">
           <h1 className="text-lg font-bold">Customer Timeline</h1>
           <p className="text-xs opacity-80">Recent transactions history</p>
         </div>
@@ -116,7 +116,7 @@ function CustomerHistory() {
                       customerStatus: item.status,
                     }}
                   >
-                    <h2 className="font-semibold text-blue-700 text-sm hover:underline cursor-pointer">
+                    <h2 className="font-semibold text-[#07277F] text-sm hover:underline cursor-pointer">
                       {item.name}
                     </h2>
                   </Link>
@@ -141,9 +141,9 @@ function CustomerHistory() {
                 </div>
 
                 <div className="mt-3 flex justify-between items-center">
-                  <p className="font-bold text-blue-600">{item.amount}</p>
+                  <p className="font-bold text-[#07277F]">{item.amount}</p>
                   <Link to="/paymenthistory">
-                    <button className="text-[10px] bg-indigo-600 text-white px-3 py-1 rounded-md">
+                    <button className="text-[10px] bg-[#07277F] text-white px-3 py-1 rounded-md">
                       Payment Details
                     </button>
                   </Link>

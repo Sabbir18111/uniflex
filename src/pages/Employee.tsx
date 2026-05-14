@@ -149,7 +149,7 @@ function EmployeeTree() {
       {/* Mobile Container */}
       <div className="w-107 min-h-screen to-white rounded-xl shadow overflow-hidden">
         {/* Header */}
-        <div className="bg-linear-to-r from-blue-900 to-indigo-900 p-5 text-white sticky top-0 z-20">
+        <div className="bg-[#07277F] p-5 text-white sticky top-0 z-20">
           <h1 className="text-xl font-bold">Employee Tree</h1>
 
           <p className="text-xs opacity-80 mt-1">

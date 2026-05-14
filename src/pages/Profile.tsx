@@ -108,12 +108,12 @@ const Profile = () => {
         </section>
 
         {/* Wallet */}
-        <section className="rounded-xl bg-[#263f96] p-6 text-white shadow-lg -mt-10">
-          <p className="text-sm text-white/45 font-medium">Wallet Balance</p>
+        <section className="rounded-xl bg-[#07277F] p-6 text-white shadow-lg -mt-10">
+          <p className="text-sm text-blue-200 font-medium">Wallet Balance</p>
 
           <Link
             to="/payment"
-            className="text-sm font-medium text-white/70 underline mt-1"
+            className="text-sm font-medium text-white/70  mt-1"
           >
             <h3 className="mt-1 text-[38px] leading-none font-extrabold tracking-tight text-[#9cb4ff]">
               ৳ 42,850.00

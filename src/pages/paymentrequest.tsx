@@ -9,9 +9,9 @@ const BalanceRequestCard = () => {
   const remainingBalance = Math.max(currentBalance - requestAmount, 0);
 
   return (
-    <div className="w-full max-w-105 rounded-4xl bg-[#f8fafc] p-3 shadow-[0_20px_60px_rgba(15,23,42,0.15)]">
-      <div className="relative overflow-hidden rounded-[28px] bg-white">
-        <div className="absolute left-0 top-0 h-40 w-full bg-linear-to-br from-[#00176b] via-[#1239d8] to-[#6ea8ff]" />
+    <div className="w-full max-w-107.5 p-3">
+      <div className="relative overflow-hidden">
+        <div className="absolute left-0 top-0 h-40 w-full bg-[#07277F]  rounded-sm" />
         <div className="absolute -right-12 -top-12 h-40 w-40" />
         <div className="absolute left-8 top-24 h-20 w-20" />
 
@@ -44,7 +44,7 @@ const BalanceRequestCard = () => {
               Request Balance
             </label>
 
-            <div className="flex items-center rounded-2xl border border-slate-200 bg-slate-50 px-4 py-1 shadow-inner focus-within:border-[#1239d8] focus-within:bg-white focus-within:ring-4 focus-within:ring-blue-100">
+            <div className="flex items-center rounded-xl border border-slate-200 bg-slate-50 px-4 py-1 focus-within:border-[#1239d8] focus-within:bg-white focus-within:ring-4 focus-within:ring-blue-100">
               <span className="text-xl font-black text-[#00176b]">৳</span>
 
               <input
@@ -62,7 +62,7 @@ const BalanceRequestCard = () => {
               Method
             </label>
 
-            <div className="relative rounded-2xl border border-slate-200 bg-slate-50 px-4 shadow-inner focus-within:border-[#1239d8] focus-within:bg-white focus-within:ring-4 focus-within:ring-blue-100">
+            <div className="relative rounded border border-slate-200 bg-slate-50 px-4 shadow-inner focus-within:border-[#1239d8] focus-within:bg-white focus-within:ring-4 focus-within:ring-blue-100">
               <select
                 value={method}
                 onChange={(e) => setMethod(e.target.value)}
@@ -81,14 +81,14 @@ const BalanceRequestCard = () => {
           </div>
 
           <div className="grid grid-cols-2 gap-3">
-            <div className="rounded-3xl bg-[#eef4ff] p-4">
+            <div className="rounded-xl bg-[#eef4ff] p-4 overflow-hidden">
               <p className="text-xs font-bold text-slate-500">Request</p>
               <h3 className="mt-1 text-xl font-black text-[#00176b]">
                 ৳{requestAmount.toFixed(2)}
               </h3>
             </div>
 
-            <div className="rounded-3xl bg-[#ecfdf5] p-4">
+            <div className="rounded-xl bg-[#ecfdf5] p-4 overflow-hidden">
               <p className="text-xs font-bold text-slate-500">Remaining</p>
               <h3 className="mt-1 text-xl font-black text-green-700">
                 ৳{remainingBalance.toFixed(2)}
@@ -97,7 +97,7 @@ const BalanceRequestCard = () => {
           </div>
 
           <button
-            className="mt-2 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#00176b] px-5 py-4 text-sm font-black text-white shadow-[0_12px_30px_rgba(0,23,107,0.35)] transition hover:-translate-y-0.5 hover:bg-[#00228f]"
+            className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-[#07277F] px-5 py-4 text-sm font-black text-white  hover:bg-[#00228f]"
             onClick={() =>
               console.log({
                 currentBalance,

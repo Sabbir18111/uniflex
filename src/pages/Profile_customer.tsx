@@ -56,12 +56,12 @@ const Profile_Customer = () => {
         </section>
 
         {/* BALANCE SECTION (NO DESIGN CHANGE) */}
-        <header className="rounded-xl bg-[#263f96] p-6 text-white -mt-10">
+        <header className="rounded-xl bg-[#07277F] p-6 text-white -mt-10">
           <p className="text-sm text-white/45 font-medium">Due Balance</p>
 
           <Link
             to="/customerpayment"
-            className="text-sm font-medium text-white/70 underline mt-1"
+            className="text-sm font-medium text-white/70 mt-1"
           >
             <h3 className="mt-1 text-[38px] leading-none font-extrabold tracking-tight text-[#9cb4ff]">
               {customerBalance || "442,850.00"}

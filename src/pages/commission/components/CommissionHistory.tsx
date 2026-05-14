@@ -11,7 +11,7 @@ const CommissionHistory = ({ item }: { item: Item }) => {
   return (
     <div
       key={item.id}
-      className="bg-white border border-slate-200 rounded-3xl p-4"
+      className="bg-white border border-slate-200 rounded-xl p-4"
     >
       <div className="flex justify-between items-start">
         <div>

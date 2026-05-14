@@ -60,7 +60,7 @@ function Component() {
       >
         {/* SIDEBAR */}
         <aside
-          className={`h-full w-65.5 bg-[#263F96] text-white pointer-events-auto transition-transform duration-300 ease-out ${
+          className={`h-full w-65.5 bg-[#07277F] text-white pointer-events-auto transition-transform duration-300 ease-out ${
             sidebarOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -279,7 +279,7 @@ function Component() {
                 <Link
                   to="/"
                   onClick={closeSidebar}
-                  className="absolute left-0 bottom-0 w-65.5 mt-auto h-11 px-3 flex items-center  gap-3 text-white bg-red-500"
+                  className="absolute left-0 bottom-0 w-65.5 mt-auto h-11 px-3 flex items-center  gap-3 text-white bg-red-600"
                 >
                   <span className="material-symbols-outlined">logout</span>
                   Logout

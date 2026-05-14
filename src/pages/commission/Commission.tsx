@@ -33,18 +33,18 @@ function CommissionPage() {
       {/* Mobile Container */}
       <div className="w-full max-w-107 bg-white min-h-screen pb-24">
         {/* Header */}
-        <div className="bg-blue-900 px-5 pt-12 pb-6 rounded-b-[30px] shadow-lg">
+        <div className="bg-[#07277F] px-5 pt-12 pb-6 rounded-b-lg">
           <h1 className="text-white text-2xl font-bold">Commission</h1>
           <p className="text-blue-100 text-sm mt-1">Your commission overview</p>
 
           {/* Summary Cards */}
           <div className="grid grid-cols-2 gap-3 mt-5">
-            <div className="bg-white rounded-3xl p-4 shadow-sm">
+            <div className="bg-white rounded-xl p-4 shadow-sm">
               <p className="text-gray-500 text-sm">Total Commission</p>
               <h2 className="text-xl font-bold mt-1">৳75,500</h2>
             </div>
 
-            <div className="bg-white rounded-3xl p-4 shadow-sm">
+            <div className="bg-white rounded-xl p-4 shadow-sm">
               <p className="text-gray-500 text-sm">Pending</p>
               <h2 className="text-xl font-bold text-orange-500 mt-1">
                 ৳28,500

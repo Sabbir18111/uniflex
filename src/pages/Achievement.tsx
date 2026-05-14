@@ -31,7 +31,6 @@ export default function TeamDashboard() {
             src={img}
           />
         </div>
-
         <div>
           <h2 className="text-h2 leading-6 font-extrabold text-[#00176b] tracking-tight mb-9 -ml-3">
             Mr. Hasan Rohaman Sajjad
@@ -51,7 +50,7 @@ export default function TeamDashboard() {
 
           <div className="text-right">
             <p className="text-xs text-slate-500">Target</p>
-            <h2 className="text-xl font-bold text-blue-600">120 Katha</h2>
+            <h2 className="text-xl font-bold text-[#07277F]">120 Katha</h2>
           </div>
         </div>
 
@@ -73,11 +72,11 @@ export default function TeamDashboard() {
           <div className="mt-4">
             <div className="flex items-center justify-between text-xs mb-1">
               <span className="text-slate-500">Progress</span>
-              <span className="font-semibold text-blue-600">65%</span>
+              <span className="font-semibold text-[#07277F]">65%</span>
             </div>
 
             <div className="w-full h-2 bg-white rounded-full overflow-hidden">
-              <div className="h-full w-[65%] bg-blue-600 rounded-full"></div>
+              <div className="h-full w-[65%] bg-[#07277F] rounded-full"></div>
             </div>
           </div>
         </div>
@@ -85,7 +84,7 @@ export default function TeamDashboard() {
         {/* Team List */}
         <div>
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-sm font-semibold text-[#00176b]">Team List</h3>
+            <h3 className="text-sm font-semibold text-[#07277F]">Team List</h3>
 
             <span className="text-xs text-slate-500">
               {teamList.length} Members
@@ -99,14 +98,14 @@ export default function TeamDashboard() {
                 className="rounded-xl border border-blue-100 bg-white p-3 flex items-center justify-between active:scale-[0.98] transition"
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-xl bg-blue-100 text-blue-600 grid place-items-center">
+                  <div className="w-11 h-11 rounded-xl bg-blue-100 text-[#07277F] grid place-items-center">
                     <span className="material-symbols-outlined text-[22px]">
                       groups
                     </span>
                   </div>
 
                   <div>
-                    <h4 className="text-sm font-semibold text-[#00176b] leading-4">
+                    <h4 className="text-sm font-semibold text-[#07277F] leading-4">
                       {member.name}
                     </h4>
 
@@ -117,7 +116,7 @@ export default function TeamDashboard() {
                 </div>
 
                 <div className="text-right">
-                  <p className="text-sm font-bold text-blue-600">
+                  <p className="text-sm font-bold text-[#07277F]">
                     {member.position}
                   </p>
 
